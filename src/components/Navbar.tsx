@@ -221,22 +221,9 @@ export default function Navbar() {
 
             {/* Desktop CTA Button */}
             <div className="hidden lg:block">
-              <Link href="/services">
-                <Button className="group relative px-6 py-3 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 hover:from-blue-700 hover:via-blue-800 hover:to-blue-900 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 hover:scale-105 overflow-hidden">
-                  {/* Animated background overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-out"></div>
-
-                  {/* Glow effect */}
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400 to-cyan-400 opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-500"></div>
-
-                  {/* Content */}
-                  <span className="relative flex items-center gap-2">
-                    DISCOVER SOLUTIONS
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-1 transition-transform duration-300">
-                      <path d="M5 12h14" />
-                      <path d="m12 5 7 7-7 7" />
-                    </svg>
-                  </span>
+              <Link href="/contact">
+                <Button className="px-8 py-2 md:h-11 !bg-[#D13B3D] !bg-none hover:!bg-[#b83436] text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
+                  Contact Us
                 </Button>
               </Link>
             </div>
@@ -358,9 +345,9 @@ export default function Navbar() {
                         <Link
                           href="/contact"
                           onClick={() => setIsMobileMenuOpen(false)}
-                          className="w-full py-4 text-base font-medium bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 hover:from-blue-700 hover:via-blue-800 hover:to-blue-900 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center"
+                          className="w-full py-4 text-base font-medium !bg-[#D13B3D] !bg-none hover:!bg-[#b83436] text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center"
                         >
-                          Contact
+                          Contact Us
                         </Link>
                       </div>
                     </div>
