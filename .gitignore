@@ -39,14 +39,3 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-.env*.local
-
-# Temporary build and env files
-env_*.txt
-build_output*.txt
-build_error_detailed.log
-deploy_output.txt
-eslint_report.txt
-eslint_src_report.*
-lint_output.txt
-local_build_output.txt

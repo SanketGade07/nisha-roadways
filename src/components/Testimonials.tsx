@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useRef } from "react";
-import { Quote } from "lucide-react";
+
 
 type Testimonial = {
   name: string;
@@ -100,7 +100,7 @@ function MarqueeRow({ items, direction, speed = 40 }: { items: Testimonial[]; di
           >
             <div className="bg-white border border-slate-100 rounded-2xl sm:rounded-3xl p-4 sm:p-8 shadow-sm hover:shadow-xl transition-all duration-300 h-full flex flex-col justify-between group">
               <div>
-                <Quote className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600/20 mb-3 sm:mb-4 group-hover:text-blue-600/40 transition-colors" />
+
                 <blockquote className="text-slate-600 text-xs sm:text-base leading-relaxed italic whitespace-normal mb-4 sm:mb-6">
                   &quot;{t.quote}&quot;
                 </blockquote>

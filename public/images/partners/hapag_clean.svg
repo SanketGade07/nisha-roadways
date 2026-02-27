@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 80" fill="none">
-  <!-- Arrow/chevron icon -->
-  <polygon points="5,40 25,15 45,15 25,40 45,65 25,65" fill="#00447C"/>
-  <polygon points="25,40 45,15 65,15 45,40 65,65 45,65" fill="#00447C"/>
-  <!-- Text -->
-  <text x="80" y="52" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="36" fill="#00447C">Hapag-Lloyd</text>
-</svg>

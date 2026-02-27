@@ -105,10 +105,10 @@ const ResourcesMegaMenu: React.FC<ResourcesMegaMenuProps> = ({
             desc: "Get in touch with us",
             href: "/contact",
             image: "/images/use-everywhere/images4.png",
-            baseColor: "#D13B3D",
+            baseColor: "#f43f5e",
             icon: <ArrowRight />,
-            style: { background: '#D13B3D', color: '#ffffff' },
-            hoverStyle: { background: '#b43234' }
+            style: { background: 'linear-gradient(135deg, #f43f5e, #9f1239)', color: '#ffffff' },
+            hoverStyle: { background: 'linear-gradient(135deg, #e11d48, #881337)' }
         },
     ];
 

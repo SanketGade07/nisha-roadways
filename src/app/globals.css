@@ -36,11 +36,11 @@
   }
 }
 
-/* Use Poppins font for all text - Medium weight by default */
+/* Use Branding font for all text - Medium weight by default */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
+  font-family: "Branding", Arial, Helvetica, sans-serif;
   font-weight: 500;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -49,9 +49,9 @@ body {
 
 /* Default font family for all elements */
 *,
-    *::before,
-    *::after {
-  font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
+*::before,
+*::after {
+  font-family: "Branding", Arial, Helvetica, sans-serif;
 }
 
 /* All headings - Semibold (600) */

@@ -173,7 +173,7 @@ export default function VCardPopupForm({ show, onClose }: VCardPopupFormProps) {
                 </select>
                 <motion.button
                   type="submit"
-                  className="w-full !bg-[#D13B3D] text-white py-2.5 sm:py-3 rounded-full font-bold shadow-md hover:!bg-[#b43234] transition-all duration-200 text-sm sm:text-lg tracking-wide flex items-center justify-center gap-2"
+                  className="w-full bg-blue-600 text-white py-2.5 sm:py-3 rounded-full font-bold shadow-md hover:bg-blue-700 transition-all duration-200 text-sm sm:text-lg tracking-wide flex items-center justify-center gap-2"
                   disabled={loading}
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.98 }}

@@ -10,31 +10,31 @@ const INSIGHTS = [
         title: "Cost- Effective Solutions For Freight Shipping",
         date: "Mar 19, 2026",
         comments: "4 comments",
-        image: "/images/industries-insights/64a225cffc8c16e3592d8b6e2367b33a70ac7030.jpg",
+        image: "/images/industry-insights/64a225cffc8c16e3592d8b6e2367b33a70ac7030.jpg",
     },
     {
         title: "The Role Of Technology In Modern Air Transportation",
         date: "Mar 21, 2026",
         comments: "2 comments",
-        image: "/images/industries-insights/a1405e00a8f824a617041f8b55d1a3297a2013aa.jpg",
+        image: "/images/industry-insights/a1405e00a8f824a617041f8b55d1a3297a2013aa.jpg",
     },
     {
         title: "Optimizing Logistics For Faster Cargo Delivery",
         date: "Jun 03, 2026",
         comments: "5+ comments",
-        image: "/images/industries-insights/154975eff473f12fb97a64781c528d14f245cdc3.jpg",
+        image: "/images/industry-insights/154975eff473f12fb97a64781c528d14f245cdc3.jpg",
     },
     {
         title: "Container Handling Onboard Cranes",
         date: "Jul 11, 2026",
         comments: "3 comments",
-        image: "/images/industries-insights/4d1e0a56f73b1da2cb1560505a43bc737c95ccac.jpg",
+        image: "/images/industry-insights/4d1e0a56f73b1da2cb1560505a43bc737c95ccac.jpg",
     }
 ];
 
 export default function IndustryInsights() {
     return (
-        <section className="py-[100px] bg-white font-poppins">
+        <section className="py-[100px] bg-white">
             <div className="max-w-[1440px] mx-auto px-6">
                 <div className="max-w-[1143px] mx-auto">
                     {/* Header Section */}
@@ -80,15 +80,15 @@ export default function IndustryInsights() {
 
                                 {/* Content Container */}
                                 <div className="flex flex-col flex-1 px-1">
-                                    <h3 className="font-roboto font-semibold text-[17px] leading-[20px] text-[#1A1A1A] mb-2 line-clamp-3">
+                                    <h3 className="font-semibold text-[17px] leading-[20px] text-[#1A1A1A] mb-2 line-clamp-3">
                                         {item.title}
                                     </h3>
-                                    <p className="font-poppins font-normal text-[11.9px] leading-[15.3px] text-[#707070] mb-auto">
+                                    <p className="font-normal text-[11.9px] leading-[15.3px] text-[#707070] mb-auto">
                                         {item.date} <span className="mx-1">-</span> {item.comments}
                                     </p>
                                     <Link
                                         href="#"
-                                        className="font-poppins font-normal text-[9.43px] leading-[15.3px] text-[#707070] hover:text-[#1556F1] transition-colors mt-4 block underline underline-offset-4 decoration-[#D0D0D0]"
+                                        className="font-normal text-[9.43px] leading-[15.3px] text-[#707070] hover:text-[#1556F1] transition-colors mt-4 block underline underline-offset-4 decoration-[#D0D0D0]"
                                     >
                                         Read more
                                     </Link>

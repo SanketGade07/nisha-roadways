@@ -1,12 +1,13 @@
 import Hero from "@/components/Hero";
+import ImpactSection from "@/components/ImpactSection";
 import CompanyLogos from "@/components/CompanyLogos";
-import AboutCompany from "@/components/AboutCompany";
+import AboutAdvantages from "@/components/AboutAdvantages";
+import Feature from "@/components/FeaturesSection";
 import Solutions from "@/components/OurSolution";
 import ReviewVideo from "@/components/ReviewVideo";
-import ImpactStats from "@/components/ImpactStats";
 import IndustryInsights from "@/components/IndustryInsights";
-import CtaBanner from "@/components/CtaBanner";
 import GlobalLocationsMap from "@/components/GlobalLocationsMap";
+import CtaBanner from "@/components/CtaBanner";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -14,14 +15,12 @@ export default function Home() {
     <main className="pt-20 ">
       <Hero />
       <CompanyLogos />
-      {/* <Feature /> */}
-      <AboutCompany />
+      <AboutAdvantages />
+      <Feature />
       <Solutions />
+      <ImpactSection />
       <ReviewVideo />
-      <ImpactStats />
       <IndustryInsights />
-      {/* <Testimonials hideHeader={true} singleRow={true} hideStats={true} /> */}
-      {/* <BlogSection /> */}
       <GlobalLocationsMap />
       <CtaBanner />
       <Footer />

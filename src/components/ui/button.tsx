@@ -10,7 +10,7 @@ const base =
 
 const variants: Record<NonNullable<ButtonProps["variant"]>, string> = {
   default:
-    "bg-blue-600 text-white hover:bg-blue-700 shadow-lg hover:shadow-xl",
+    "bg-gradient-to-r from-[#6a31eb] via-[#9a45d1] to-[#d560ab] text-white hover:from-[#1e7aa8] hover:via-[#7a4a72] hover:to-[#b8393f] shadow-lg hover:shadow-xl",
   outline:
     "bg-white border-2 border-gray-300 text-gray-800 hover:border-blue-600 hover:bg-gray-50",
   ghost: "bg-transparent text-gray-700 hover:bg-gray-100",

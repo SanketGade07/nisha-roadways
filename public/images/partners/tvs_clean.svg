@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 120" fill="none">
-  <!-- Horse silhouette -->
-  <path d="M45 85c5-15 15-30 30-45 10-10 25-20 40-25 10-3 20-3 25 0 8 5 12 12 15 18 5 10 8 15 15 18 5 2 12 3 20 2 10-2 18-5 25-8 5-3 10-5 12-3 3 3-2 10-8 15-8 7-20 12-35 15-12 3-25 3-35 0-8-2-15-5-20-10-3-3-5-5-8-5-5 0-10 5-15 12-8 10-18 18-30 20-10 2-20 0-25-4h-6z" fill="#E31E24"/>
-  <path d="M45 85c3-2 8-3 12-2 5 2 10 5 12 8" stroke="#E31E24" stroke-width="2" fill="none"/>
-  <!-- TVS Text -->
-  <text x="70" y="110" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="52" fill="#1B3B8A" letter-spacing="3">TVS</text>
-</svg>

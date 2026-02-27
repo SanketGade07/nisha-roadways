@@ -116,79 +116,75 @@ export const allPartners = [
     "Asian Tire Factory Ltd."
 ];
 
-// Local logo files from public/images/partners/ — all using transparent SVGs
+// Local logo files from public/images/partners/
 export const partnerLogos: Record<string, string> = {
-    // DP World (already a good SVG)
+    // DP World
     "DP World Pvt Ltd": "/images/partners/DP_World_2021_logo.svg",
     "DP World Multimodal Logistics Private Limited": "/images/partners/DP_World_2021_logo.svg",
     "DP World Rail Logistics Private Limited": "/images/partners/DP_World_2021_logo.svg",
 
-    // DHL (using clean SVG)
-    "DHL": "/images/partners/dhl_final.svg",
-    "DHL Supply Chain India Pvt Ltd": "/images/partners/dhl_final.svg",
+    // DHL
+    "DHL": "/images/partners/dhl.png",
+    "DHL Supply Chain India Pvt Ltd": "/images/partners/dhl.png",
 
-    // Kuehne Nagel (using clean SVG)
-    "Kuehne Nagel": "/images/partners/kn_clean.svg",
-    "Kuehne +Nagel Pvt Ltd": "/images/partners/kn_clean.svg",
+    // Kuehne Nagel
+    "Kuehne Nagel": "/images/partners/kuehne nagel.png",
+    "Kuehne +Nagel Pvt Ltd": "/images/partners/kuehne nagel.png",
 
-    // Avana (using clean SVG)
-    "Avana Logistek Limited": "/images/partners/aavana_clean.svg",
+    // Avana
+    "Avana Logistek Limited": "/images/partners/Aavana_on-White-BG.png",
 
-    // TVS (using clean SVG)
-    "TVS": "/images/partners/tvs_clean.svg",
+    // TVS
+    "TVS": "/images/partners/tvs.png",
 
-    // Maersk (already a good SVG)
-    "Maersk": "/images/partners/maersk.svg",
-    "Maersk A/s.": "/images/partners/maersk.svg",
+    // Maersk
+    "Maersk": "/images/partners/maersk-logo-5Rmy2WJH_t.jpg",
+    "Maersk A/s.": "/images/partners/maersk-logo-5Rmy2WJH_t.jpg",
 
-    // MSC (using clean SVG)
-    "MSC Line": "/images/partners/msc_final.svg",
-    "MSC Mediterranean Shipping CO SA": "/images/partners/msc_final.svg",
+    // MSC
+    "MSC Line": "/images/partners/msc cruises.jpg",
+    "MSC Mediterranean Shipping CO SA": "/images/partners/msc cruises.jpg",
 
-    // Hapag Lloyd (using clean SVG)
-    "Hapag Llyods": "/images/partners/hapag_clean.svg",
-    "Hapag-Lloyd Aktiengesellschaft": "/images/partners/hapag_clean.svg",
+    // Hapag Lloyd
+    "Hapag Llyods": "/images/partners/hapag-lloyd.png",
+    "Hapag-Lloyd Aktiengesellschaft": "/images/partners/hapag-lloyd.png",
 
-    // OOCL (using clean SVG)
-    "OOCL ( Orient Overseas Co. Limited)": "/images/partners/oocl_final.svg",
-    "Orient Overseas Container Line Ltd.": "/images/partners/oocl_final.svg",
+    // OOCL
+    "OOCL ( Orient Overseas Co. Limited)": "/images/partners/orient overseas conatainer line.png",
+    "Orient Overseas Container Line Ltd.": "/images/partners/orient overseas conatainer line.png",
 
-    // Adani (using clean SVG)
-    "Adani Logistics Limited": "/images/partners/adani_final.svg",
+    // Adani
+    "Adani Logistics Limited": "/images/partners/growth-adani-logo.png",
 
-    // Concor (using clean SVG)
-    "Concor India": "/images/partners/concor_final.svg",
+    // Concor
+    "Concor India": "/images/partners/Container_Corporation_of_India_logo.svg.png",
 
-    // Ocean Network Express (ONE) (using clean SVG)
-    "Ocean Network Express Pte Ltd.": "/images/partners/one_clean.svg",
-    "Ocean Network India Pvt Ltd": "/images/partners/one_clean.svg",
+    // Ocean Network Express (ONE)
+    "Ocean Network Express Pte Ltd.": "/images/partners/lg-6732affe950d3-Ocean-Network-Express.webp",
+    "Ocean Network India Pvt Ltd": "/images/partners/lg-6732affe950d3-Ocean-Network-Express.webp",
 
-    // COSCO (using clean SVG)
-    "Cosco Shipping": "/images/partners/cosco_clean.svg",
-    "Cosco Shipping Lines India Pvt Ltd.": "/images/partners/cosco_clean.svg",
+    // COSCO
+    "Cosco Shipping": "/images/partners/COSCOCS-ver1.svg.png",
+    "Cosco Shipping Lines India Pvt Ltd.": "/images/partners/COSCOCS-ver1.svg.png",
 
-    // CMA CGM (using clean SVG)
-    "CMA CGM": "/images/partners/cmacgm_clean.svg",
-    "CMA CGM S A (C/O CMA CGM Agencies India Pvt Ltd.)": "/images/partners/cmacgm_clean.svg",
+    // CMA CGM
+    "CMA CGM": "/images/partners/CMA_CGM_Company_Logo_July_2017.png",
+    "CMA CGM S A (C/O CMA CGM Agencies India Pvt Ltd.)": "/images/partners/CMA_CGM_Company_Logo_July_2017.png",
 
-    // Bulk Tainer (using clean SVG)
-    "Bulk Tainer Logistics": "/images/partners/bulktainer_clean.svg"
+    // Bulk Tainer
+    "Bulk Tainer Logistics": "/images/partners/bulktainer-group-logo.png"
 };
 
 // Featured logos for the trusted section on homepage
-// All normalized to 200x50px with transparent backgrounds
 export const featuredPartnerLogos = [
-    { src: "/images/partners/normalized/maersk.png", alt: "Maersk" },
-    { src: "/images/partners/normalized/dhl_final.png", alt: "DHL" },
-    { src: "/images/partners/normalized/msc_final.png", alt: "MSC" },
-    { src: "/images/partners/normalized/oocl_final.png", alt: "OOCL" },
-    { src: "/images/partners/normalized/adani_final.png", alt: "Adani" },
-    { src: "/images/partners/normalized/DP_World_2021_logo.png", alt: "DP World" },
-    { src: "/images/partners/normalized/CMA_CGM_Company_Logo_July_2017.png", alt: "CMA CGM" },
-    { src: "/images/partners/normalized/concor.png", alt: "Concor" },
-    { src: "/images/partners/normalized/COSCOCS-ver1.svg.png", alt: "COSCO" },
-    { src: "/images/partners/normalized/tvs.png", alt: "TVS" },
-    { src: "/images/partners/normalized/lg-6732affe950d3-Ocean-Network-Express.png", alt: "Ocean Network Express" },
-    { src: "/images/partners/normalized/Aavana_on-White-BG.png", alt: "Avana" }
+    { src: "/images/trustedby/66a9340e1605ced8fc1169b2_American%20Express%20(1).svg", alt: "American Express" },
+    { src: "/images/trustedby/681e138d809d7f9a38ef5047_1stPhorm-Shipping.svg", alt: "1st Phorm" },
+    { src: "/images/trustedby/681e13a611dc99e337260e81_Ebay-Shipping.svg", alt: "eBay" },
+    { src: "/images/trustedby/681e13c4f86063e563b5c1c5_RayBan-Shipping.svg", alt: "Ray-Ban" },
+    { src: "/images/trustedby/681e13e3e7b124d653b8cefa_Nomad-Shipping.svg", alt: "Nomad" },
+    { src: "/images/trustedby/681e141150ed2e62414d2bb3_Shopify-Shipping.svg", alt: "Shopify" },
+    { src: "/images/trustedby/681e14287d9a926535567008_Luxottica-Shipping.svg", alt: "Luxottica" },
+    { src: "/images/trustedby/681e144908dfd61fdd236ae0_Orbitkey-Shipping.svg", alt: "Orbitkey" },
+    { src: "/images/trustedby/681e148cd1bd071d6be21b6d_TargetOptical.svg", alt: "Target Optical" },
+    { src: "/images/trustedby/681e14eac391f84c067ac332_Oakley-Shipping.svg", alt: "Oakley" }
 ];
-

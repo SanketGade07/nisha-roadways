@@ -16,9 +16,6 @@ module.exports = {
       '2xl': '1536px',  // Extra large desktop
     },
     extend: {
-      fontFamily: {
-        poppins: ['var(--font-poppins)', 'sans-serif'],
-      },
       animation: {
         'marquee-left': 'marquee-left 60s linear infinite',
         'marquee-right': 'marquee-right 60s linear infinite',

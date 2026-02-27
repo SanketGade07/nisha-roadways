@@ -1,4 +1,3 @@
-/* eslint-disable */
 // React wrapper that includes useEffectEvent polyfill
 /* eslint-disable @typescript-eslint/no-require-imports */
 'use strict';

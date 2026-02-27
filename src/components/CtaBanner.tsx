@@ -5,11 +5,11 @@ import Image from 'next/image';
 
 const CtaBanner: React.FC = () => {
   return (
-    <section className="w-full h-[369px] relative overflow-hidden font-poppins">
+    <section className="w-full h-[369px] relative overflow-hidden">
       {/* Background Image - Absolute Full Width & Height */}
       <div className="absolute inset-0 w-full h-full">
         <Image
-          src="/images/talk-logistic-expert-section/797cd3ef4d3095d239dba9d1c8ce28bf61bc9346.png"
+          src="/images/footer/crosslink-desktop-01c1f723fae24a4fa348d106c98bf8ad.avif"
           alt="Talk to a Logistics Expert"
           fill
           className="object-cover"

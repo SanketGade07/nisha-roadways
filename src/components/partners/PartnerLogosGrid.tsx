@@ -22,7 +22,7 @@ function PartnerCard({ partner, index }: { partner: string, index: number }) {
                     <img
                         src={logoUrl}
                         alt={`${partner} logo`}
-                        className="max-w-full max-h-full object-contain grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100 transition-all duration-500 mix-blend-multiply"
+                        className="max-w-full max-h-full object-contain grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100 transition-all duration-500"
                         onError={() => setImageError(true)}
                     />
                 ) : (

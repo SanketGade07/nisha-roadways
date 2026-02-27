@@ -3,76 +3,63 @@
 import { featuredPartnerLogos } from "@/data/partners";
 
 export default function CompanyLogos() {
+  // Use the curated list of logos from partners data
   const logoSet = featuredPartnerLogos;
 
   return (
-    <section className="bg-white py-14 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4">
+    <section className="bg-white py-14 overflow-hidden w-full">
+      <div className="w-full">
         {/* Header Text */}
         <div className="text-center mb-10">
-          <h2 className="text-[#3F4859] text-[18px] sm:text-[20px] font-semibold tracking-tight">
+          <h2 className="text-[#3F4859] text-[1.75rem] font-semibold tracking-tight">
             1000+ Brands Solved Shipping with Nisha Roadways
           </h2>
         </div>
 
-        {/* Infinite Scroll Container */}
-        <div className="relative flex items-center">
-
-
-          {/* Marquee Track */}
-          <div className="marquee-track flex items-center">
-            {/* First set */}
-            <div className="flex items-center">
-              {logoSet.map((logo, idx) => (
-                <div
-                  key={`a-${idx}`}
-                  className="flex-shrink-0 w-[160px] flex items-center justify-center grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
-                >
-                  <img
-                    src={logo.src}
-                    alt={logo.alt}
-                    className="h-[30px] w-auto object-contain select-none pointer-events-none"
-                    loading="lazy"
-                  />
-                </div>
-              ))}
-            </div>
-
-            {/* Second set for seamless looping */}
-            <div className="flex items-center">
-              {logoSet.map((logo, idx) => (
-                <div
-                  key={`b-${idx}`}
-                  className="flex-shrink-0 w-[160px] flex items-center justify-center grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
-                >
-                  <img
-                    src={logo.src}
-                    alt={logo.alt}
-                    className="h-[30px] w-auto object-contain select-none pointer-events-none"
-                    loading="lazy"
-                  />
-                </div>
-              ))}
-            </div>
+        {/* Logos Wrapper */}
+        <div className="logos-wrapper relative flex items-center overflow-hidden w-full">
+          {/* Main Container that animates */}
+          <div className="logos-container flex items-center">
+            {/* Combined Sets for perfect seamlessness */}
+            {[...logoSet, ...logoSet].map((logo, idx) => (
+              <div key={`logo-${idx}`} className="logo_item flex-shrink-0 w-[200px] flex items-center justify-center">
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  style={{ height: "40px", width: "100px" }}
+                  className="logo_item--img object-contain grayscale opacity-100 hover:grayscale-0 hover:opacity-100 transition-all duration-300 pointer-events-none select-none "
+                  loading="eager"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>
 
       <style jsx>{`
-        .marquee-track {
+        .logos-wrapper {
+          width: 100%;
+        }
+
+        .logos-container {
           display: flex;
           width: fit-content;
-          animation: marquee-scroll 40s linear infinite;
+          animation: scroll 30s linear infinite;
           will-change: transform;
         }
 
-        @keyframes marquee-scroll {
+        .logo_item {
+          /* Fixed width is crucial for a smooth loop */
+          width: 200px;
+        }
+
+        @keyframes scroll {
           0% {
-            transform: translateX(0);
+            transform: translate3d(0, 0, 0);
           }
           100% {
-            /* Since the track contains two identical sets, we move by half the total width */
-            transform: translateX(-50%);
+            /* Moves by exactly half (one full set of logos) */
+            transform: translate3d(-50%, 0, 0);
           }
         }
       `}</style>
