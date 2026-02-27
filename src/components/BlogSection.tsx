@@ -63,13 +63,10 @@ export default function BlogSection() {
         <div className="flex flex-col items-center text-center mb-10">
           <div className="inline-flex items-center gap-3 mb-4">
             <div className="w-[36px] h-[36px] bg-[#2563EB] rounded-[10px] flex items-center justify-center p-2">
-              <Image
-                src="/images/blog/67761af397573ca47fb7f6cb_subtitle-icon.png"
-                alt=""
-                width={20}
-                height={20}
-                className="w-full h-full object-contain brightness-0 invert"
-              />
+              <svg width="20" height="20" viewBox="0 0 18 18" fill="none">
+                <path d="M9 2L3 5.5v7L9 16l6-3.5v-7L9 2z" stroke="white" strokeWidth="1.4" strokeLinejoin="round" />
+                <path d="M9 9l6-3.5M9 9v7M9 9L3 5.5" stroke="white" strokeWidth="1.4" strokeLinejoin="round" />
+              </svg>
             </div>
             <span className="text-[18px] font-semibold text-[#1E293B]">
               Our Blog
@@ -77,7 +74,7 @@ export default function BlogSection() {
           </div>
 
           <h2 className="text-[34px] md:text-[48px] font-semibold text-slate-950 leading-[1.1] md:leading-[52px] tracking-[-1.25px]">
-            Latest from <span className="text-blue-600">our blog</span> post <br className="hidden md:block" /> update here
+            Latest from <span className="text-blue-600">our blog</span> post update here
           </h2>
         </div>
 
