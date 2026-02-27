@@ -133,12 +133,12 @@ const MapInternal = ({ geoData, L }: { geoData: any; L: any }) => {
     };
 
     return (
-        <div className="w-full relative overflow-hidden bg-white border border-gray-100 rounded-[20px] z-10" style={{ maxWidth: '1232px', height: '585px' }}>
+        <div className="w-full relative overflow-hidden bg-white border border-gray-100 rounded-[20px] z-10" style={{ maxWidth: '1232px', height: '520px' }}>
             <MapContainer
                 center={[20, 78]}
-                zoom={5}
+                zoom={3.9}
                 maxZoom={10}
-                minZoom={3}
+                minZoom={2.5}
                 style={{ width: '100%', height: '100%', background: '#ffffff' }}
                 zoomControl={false}
                 scrollWheelZoom={false}
@@ -180,14 +180,12 @@ export default function GlobalLocationsMap() {
     }
 
     return (
-        <section className="pt-[20px] pb-[60px] md:pt-[30px] md:pb-[80px] relative z-0">
+        <section className="pt-20 pb-12 md:pb-16 relative z-0">
             <div className="max-w-[1440px] mx-auto px-4 md:px-6 flex flex-col items-center">
-                {/* Title: 34px, SemiBold (600), 40px line-height */}
-                <h2 className="text-center text-[#000000] font-semibold mb-[28px] text-[34px] leading-[40px]">
+                <h2 className="text-center text-[#000000] font-semibold mb-3 text-[34px] leading-[40px] tracking-tight">
                     Ship from 60+ global locations
                 </h2>
-                {/* Description: 18px, Medium (500), #9B9B9B, 27px line-height */}
-                <p className="text-center text-[#9B9B9B] font-medium max-w-[738px] mb-[40px] text-[18px] leading-[27px]">
+                <p className="text-center text-[#9B9B9B] font-medium max-w-[738px] mb-8 text-[18px] leading-[27px]">
                     We use our network of fulfillment centers to help you strategically
                     split and manage your inventory to reduce shipping costs and transit
                     times.

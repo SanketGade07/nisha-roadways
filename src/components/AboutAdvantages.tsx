@@ -75,7 +75,7 @@ export default function AboutAdvantages() {
             <div className="relative z-10 max-w-[1440px] mx-auto">
                 <div className="flex flex-col lg:flex-row items-center lg:items-stretch gap-0">
 
-                    <div className="w-full lg:w-[34%] xl:w-[32%] p-6 sm:p-8 lg:py-28 xl:py-32 lg:pl-10 xl:pl-14 lg:pr-0 flex-shrink-0">
+                    <div className="w-full lg:w-[34%] xl:w-[32%] p-6 sm:p-8 lg:py-16 xl:py-20 lg:pl-10 xl:pl-14 lg:pr-0 flex-shrink-0">
                         <div className="relative w-full aspect-[7/10] rounded-[20px] overflow-hidden image-cut-shape">
                             <Image
                                 src="/images/about-us/67ad81ac2eca706a195e8672_Home2-about-img.jpg"
@@ -89,7 +89,7 @@ export default function AboutAdvantages() {
                     </div>
 
                     {/* ── Center + Right content ── */}
-                    <div className="flex-1 flex flex-col lg:flex-row gap-10 lg:gap-8 xl:gap-14 px-6 sm:px-10 lg:pl-10 xl:pl-14 lg:pr-10 xl:pr-16 lg:py-28 xl:py-32 pb-14 sm:pb-16">
+                    <div className="flex-1 flex flex-col lg:flex-row gap-10 lg:gap-8 xl:gap-14 px-6 sm:px-10 lg:pl-10 xl:pl-14 lg:pr-10 xl:pr-16 lg:py-16 xl:py-20 pb-8 sm:pb-10">
 
                         {/* ── Center: Text Content ── */}
                         <div className="flex-1 space-y-6 lg:space-y-7 flex flex-col justify-start">

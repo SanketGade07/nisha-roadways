@@ -84,11 +84,11 @@ const Footer: React.FC = () => {
             {/* Main Footer Content */}
             <div className="mb-6 sm:mb-12">
 
-              {/* Three-column layout with improved spacing */}
-              <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr_1fr] gap-4 sm:gap-8 lg:gap-16">
+              {/* Main Footer Content - Spread across 5 columns for maximum horizontal space */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.4fr_1.1fr_1.1fr_0.8fr_0.8fr] gap-8 lg:gap-16">
 
-                {/* Left Column - Logo and Contact */}
-                <div className="space-y-3 sm:space-y-6">
+                {/* Column 1 - Logo and Certifications */}
+                <div className="space-y-8">
                   <div className="flex justify-center lg:justify-start -ml-2 sm:-ml-3">
                     <Image
                       src="/images/nav-logo.png"
@@ -99,120 +99,89 @@ const Footer: React.FC = () => {
                     />
                   </div>
 
-                  {/* Company Address and Contact Information */}
-                  <div className="space-y-1 sm:space-y-2 text-gray-400 text-[10px] sm:text-sm">
-                    <div className="font-semibold text-white text-xs sm:text-sm">Contact Information</div>
-                    <div>909, Mayuresh Cosmos, Plot No. 37, Sector-11</div>
-                    <div>CBD Belapur, Navi Mumbai - 400 614</div>
-                    <div className="pt-1 sm:pt-2 space-y-0.5 sm:space-y-1">
-                      <div>Phone: <a href="tel:+91-22-41632222" className="text-blue-300 hover:text-blue-200 transition-colors">+91-22-41632222</a></div>
-                      <div>Mobile: <a href="tel:+91-9820420924" className="text-blue-300 hover:text-blue-200 transition-colors">+91-9820420924</a></div>
-                      <div>Email: <a href="mailto:info@nisharoadways.com" className="text-blue-300 hover:text-blue-200 transition-colors">info@nisharoadways.com</a></div>
+                  {/* Horizontal Certification Logos */}
+                  <div className="pt-2">
+                    <h3 className="text-white text-[16px] sm:text-[18px] font-bold uppercase tracking-wider mb-6">
+                      Affiliated By
+                    </h3>
+                    <div className="flex flex-wrap items-center gap-4 sm:gap-6">
+                      <Image
+                        src="/images/footer/0ac53d892398e072949c7f80ae7efc8a77c580f3.png"
+                        alt="Certification 1"
+                        width={180}
+                        height={60}
+                        className="h-12 sm:h-16 w-auto opacity-100 transition-opacity"
+                      />
+                      <Image
+                        src="/images/footer/542b1b8ddfdc1fb5e6b45eb750a595dcdb0d9ef5.png"
+                        alt="Certification 2"
+                        width={180}
+                        height={60}
+                        className="h-12 sm:h-16 w-auto opacity-100 transition-opacity"
+                      />
                     </div>
                   </div>
                 </div>
 
-                <div className="space-y-3 sm:space-y-6">
-                  <div className="grid grid-cols-2 gap-4 sm:gap-8 lg:gap-20">
-                    {/* Services Column 1 */}
-                    <div className="space-y-1 sm:space-y-2">
-                      <Link href="/services/empty-container-transportation" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-[9px] sm:text-sm py-1.5 sm:py-2 px-2 sm:px-4 border-l-2 sm:border-l-3 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2">
-                        <span className="relative z-10">Empty Container Transportation</span>
-                      </Link>
-                      <Link href="/services/export-import-containers" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-[9px] sm:text-sm py-1.5 sm:py-2 px-2 sm:px-4 border-l-2 sm:border-l-3 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2">
-                        <span className="relative z-10">Export Import Containers</span>
-                      </Link>
-                      <Link href="/services/over-dimension-cargo" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-[9px] sm:text-sm py-1.5 sm:py-2 px-2 sm:px-4 border-l-2 sm:border-l-3 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2">
-                        <span className="relative z-10">Over Dimension Cargo</span>
-                      </Link>
-                      <Link href="/services/chemical-transportation" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-[9px] sm:text-sm py-1.5 sm:py-2 px-2 sm:px-4 border-l-2 sm:border-l-3 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2">
-                        <span className="relative z-10">Chemical Transportation</span>
-                      </Link>
-                      <Link href="/blog" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-[9px] sm:text-sm py-1.5 sm:py-2 px-2 sm:px-4 border-l-2 sm:border-l-3 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2">
-                        <span className="relative z-10">Blog</span>
-                      </Link>
-                    </div>
-
-                    {/* Services Column 2 */}
-                    <div className="space-y-1 sm:space-y-2">
-                      <Link href="/services/bulk-cargo-solutions" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-[9px] sm:text-sm py-1.5 sm:py-2 px-2 sm:px-4 border-l-2 sm:border-l-3 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2">
-                        <span className="relative z-10">Bulk Cargo Solutions</span>
-                      </Link>
-                      <Link href="/services/high-value-goods" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-[9px] sm:text-sm py-1.5 sm:py-2 px-2 sm:px-4 border-l-2 sm:border-l-3 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2">
-                        <span className="relative z-10">High Value Goods</span>
-                      </Link>
-                      <Link href="/services/storage-warehousing" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-[9px] sm:text-sm py-1.5 sm:py-2 px-2 sm:px-4 border-l-2 sm:border-l-3 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2">
-                        <span className="relative z-10">Storage & Warehousing</span>
-                      </Link>
-                      <Link href="/services/lcl-consolidation" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-[9px] sm:text-sm py-1.5 sm:py-2 px-2 sm:px-4 border-l-2 sm:border-l-3 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2">
-                        <span className="relative z-10">LCL Consolidation</span>
-                      </Link>
-                      <Link href="/academy" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-[9px] sm:text-sm py-1.5 sm:py-2 px-2 sm:px-4 border-l-2 sm:border-l-3 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2">
-                        <span className="relative z-10">Academy</span>
-                      </Link>
-                    </div>
-                  </div>
+                {/* Column 2 - Services 1 */}
+                <div className="space-y-3 sm:space-y-4">
+                  <Link href="/services/empty-container-transportation" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-[10px] sm:text-sm py-2 px-4 border-l-2 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2">
+                    <span className="relative z-10 leading-relaxed block">Empty Container Transportation</span>
+                  </Link>
+                  <Link href="/services/export-import-containers" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-[10px] sm:text-sm py-2 px-4 border-l-2 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2">
+                    <span className="relative z-10 leading-relaxed block">Export Import Containers</span>
+                  </Link>
+                  <Link href="/services/over-dimension-cargo" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-[10px] sm:text-sm py-2 px-4 border-l-2 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2">
+                    <span className="relative z-10 leading-relaxed block">Over Dimension Cargo</span>
+                  </Link>
+                  <Link href="/services/chemical-transportation" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-[10px] sm:text-sm py-2 px-4 border-l-2 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2">
+                    <span className="relative z-10 leading-relaxed block">Chemical Transportation</span>
+                  </Link>
                 </div>
 
-                {/* Right Column - Why Us and Certifications */}
-                <div>
-                  <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:gap-10 items-start">
-                    {/* Why Us Column */}
-                    <div className="space-y-1 sm:space-y-2">
-                      <Link href="/about" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-[9px] sm:text-sm py-1.5 sm:py-2 px-2 sm:px-4 border-l-2 sm:border-l-3 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2">
-                        <span className="relative z-10 font-branding">About</span>
-                      </Link>
-                      <Link href="/team" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-[9px] sm:text-sm py-1.5 sm:py-2 px-2 sm:px-4 border-l-2 sm:border-l-3 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2">
-                        <span className="relative z-10 font-branding">Team</span>
-                      </Link>
-                      <Link href="/partners" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-[9px] sm:text-sm py-1.5 sm:py-2 px-2 sm:px-4 border-l-2 sm:border-l-3 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2">
-                        <span className="relative z-10 font-branding">Partners</span>
-                      </Link>
-                      <Link href="/testimonials" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-[9px] sm:text-sm py-1.5 sm:py-2 px-2 sm:px-4 border-l-2 sm:border-l-3 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2">
-                        <span className="relative z-10 font-branding">Testimonials</span>
-                      </Link>
-                      <Link href="/faq" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-[9px] sm:text-sm py-1.5 sm:py-2 px-2 sm:px-4 border-l-2 sm:border-l-3 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2">
-                        <span className="relative z-10 font-branding">FAQ</span>
-                      </Link>
-                    </div>
+                {/* Column 3 - Services 2 */}
+                <div className="space-y-3 sm:space-y-4">
+                  <Link href="/services/bulk-cargo-solutions" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-[10px] sm:text-sm py-2 px-4 border-l-2 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2">
+                    <span className="relative z-10 leading-relaxed block">Bulk Cargo Solutions</span>
+                  </Link>
+                  <Link href="/services/high-value-goods" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-[10px] sm:text-sm py-2 px-4 border-l-2 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2">
+                    <span className="relative z-10 leading-relaxed block">High Value Goods</span>
+                  </Link>
+                  <Link href="/services/storage-warehousing" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-[10px] sm:text-sm py-2 px-4 border-l-2 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2">
+                    <span className="relative z-10 leading-relaxed block">Storage & Warehousing</span>
+                  </Link>
+                  <Link href="/services/lcl-consolidation" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-[10px] sm:text-sm py-2 px-4 border-l-2 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2">
+                    <span className="relative z-10 leading-relaxed block">LCL Consolidation</span>
+                  </Link>
+                </div>
 
-                    {/* Certifications/Logos Column - Aligned as a proper column */}
-                    <div className="flex flex-col items-start justify-start pl-2 sm:pl-4">
-                      <div className="flex flex-col space-y-4 sm:space-y-5 items-start">
-                        <Image
-                          src="/images/footer/gmp.svg"
-                          alt="GMP"
-                          width={42}
-                          height={42}
-                          className="w-9 sm:w-[42px] h-auto brightness-0 invert opacity-100 transition-opacity"
-                        />
-                        <Image
-                          src="/images/footer/gsfi.png"
-                          alt="GSFI"
-                          width={42}
-                          height={20}
-                          className="w-9 sm:w-[42px] h-auto brightness-0 invert opacity-100 transition-opacity"
-                        />
-                        <div className="flex flex-col items-start">
-                          <Image
-                            src="/images/footer/iso.webp"
-                            alt="ISO"
-                            width={42}
-                            height={26}
-                            className="w-9 sm:w-[42px] h-auto brightness-0 invert opacity-100 transition-opacity"
-                          />
-                          <span className="text-[7px] font-bold text-white mt-0.5 opacity-100 tracking-tighter uppercase self-center sm:self-start">27001</span>
-                        </div>
-                        <Image
-                          src="/images/footer/aicpa.webp"
-                          alt="AICPA"
-                          width={45}
-                          height={45}
-                          className="w-10 sm:w-[45px] h-auto opacity-100 transition-opacity"
-                        />
-                      </div>
-                    </div>
-                  </div>
+                {/* Column 4 - Company */}
+                <div className="space-y-3 sm:space-y-4">
+                  <Link href="/about" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-[10px] sm:text-sm py-2 px-4 border-l-2 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2">
+                    <span className="relative z-10 font-branding leading-relaxed block">About</span>
+                  </Link>
+                  <Link href="/team" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-[10px] sm:text-sm py-2 px-4 border-l-2 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2">
+                    <span className="relative z-10 font-branding leading-relaxed block">Team</span>
+                  </Link>
+                  <Link href="/partners" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-[10px] sm:text-sm py-2 px-4 border-l-2 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2">
+                    <span className="relative z-10 font-branding leading-relaxed block">Partners</span>
+                  </Link>
+                  <Link href="/testimonials" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-[10px] sm:text-sm py-2 px-4 border-l-2 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2">
+                    <span className="relative z-10 font-branding leading-relaxed block">Testimonials</span>
+                  </Link>
+                </div>
+
+                {/* Column 5 - Resources */}
+                <div className="space-y-3 sm:space-y-4">
+                  <Link href="/blog" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-[10px] sm:text-sm py-2 px-4 border-l-2 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2">
+                    <span className="relative z-10 leading-relaxed block">Blog</span>
+                  </Link>
+                  <Link href="/academy" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-[10px] sm:text-sm py-2 px-4 border-l-2 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2">
+                    <span className="relative z-10 leading-relaxed block">Academy</span>
+                  </Link>
+                  <Link href="/faq" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-[10px] sm:text-sm py-2 px-4 border-l-2 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2">
+                    <span className="relative z-10 font-branding leading-relaxed block">FAQ</span>
+                  </Link>
                 </div>
               </div>
 

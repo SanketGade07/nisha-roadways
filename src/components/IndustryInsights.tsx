@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
+/*
 const INSIGHTS = [
     {
         title: "Cost- Effective Solutions For Freight Shipping",
@@ -34,10 +35,9 @@ const INSIGHTS = [
 
 export default function IndustryInsights() {
     return (
-        <section className="py-[100px] bg-white">
+        <section className="relative pt-12 pb-16 bg-white overflow-hidden">
             <div className="max-w-[1440px] mx-auto px-6">
                 <div className="max-w-[1143px] mx-auto">
-                    {/* Header Section */}
                     <div className="flex flex-col mb-12">
                         <div className="flex justify-between items-start mb-4">
                             <h2 className="text-[34px] font-semibold text-black leading-[40px] max-w-[800px]">
@@ -56,7 +56,6 @@ export default function IndustryInsights() {
                         </p>
                     </div>
 
-                    {/* Insights Grid */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[24px] w-full">
                         {INSIGHTS.map((item, index) => (
                             <div
@@ -68,7 +67,6 @@ export default function IndustryInsights() {
                                     height: "345.94px"
                                 }}
                             >
-                                {/* Image Container */}
                                 <div className="relative w-full h-[170px] mb-4 overflow-hidden rounded-[10px]">
                                     <Image
                                         src={item.image}
@@ -78,7 +76,6 @@ export default function IndustryInsights() {
                                     />
                                 </div>
 
-                                {/* Content Container */}
                                 <div className="flex flex-col flex-1 px-1">
                                     <h3 className="font-semibold text-[17px] leading-[20px] text-[#1A1A1A] mb-2 line-clamp-3">
                                         {item.title}
@@ -101,3 +98,5 @@ export default function IndustryInsights() {
         </section>
     );
 }
+*/
+export default function IndustryInsights() { return null; }

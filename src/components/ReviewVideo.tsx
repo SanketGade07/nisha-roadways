@@ -281,25 +281,25 @@ export default function ReviewVideo({ hideHeader = false }: { hideHeader?: boole
 
   return (
     <>
-      <section className="w-full bg-white py-6 sm:py-10 md:py-16 lg:py-20 xl:py-10 xl:pt-20 overflow-hidden md:-mt-25 md:-mb-16 -mt-4 -mb-6 relative">
+      <section className="w-full bg-white pt-26 pb-30 overflow-hidden relative">
 
 
         <div className="w-full relative z-10">
           {/* Section Heading */}
           {!hideHeader && (
-            <div className="text-center mb-8 sm:mb-12 md:mb-16 px-4">
-              <h2 className="text-sm sm:text-3xl md:text-4xl lg:text-[48px] font-bold text-gray-900 tracking-tight mb-4 sm:mb-6">
+            <div className="text-center mb-6 sm:mb-10 px-4">
+              <h2 className="text-3xl md:text-4xl lg:text-[42px] font-bold text-gray-900 tracking-tight mb-2 sm:mb-4">
                 Trusted by <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800">India's Leading Companies</span>
               </h2>
-              <div className="w-16 sm:w-32 h-1 sm:h-1.5 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 mx-auto rounded-full mb-4 sm:mb-6"></div>
-              <p className="text-xs sm:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 mx-auto rounded-full mb-3 sm:mb-4"></div>
+              <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
                 Here's what industry leaders say about working with us.
               </p>
             </div>
           )}
           {/* Scrolling Video Container */}
           <div
-            className="mt-12 overflow-hidden relative"
+            className="mt-6 overflow-hidden relative"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
             onTouchStart={handlePointerDown}
@@ -431,7 +431,7 @@ const VideoCard: React.FC<{
 
   return (
     <div
-      className="flex-shrink-0 relative rounded-[18px] overflow-hidden h-[358px] w-[258px] group mx-1 duration-300 transition-all shadow-lg select-none cursor-pointer border border-white/10"
+      className="flex-shrink-0 relative rounded-[18px] overflow-hidden h-[330px] w-[250px] group mx-1 duration-300 transition-all shadow-lg select-none cursor-pointer border border-white/10"
       data-card="true"
       draggable={false}
       onClick={() => onPlayClick(video)}

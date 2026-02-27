@@ -6,6 +6,7 @@ import Feature from "@/components/FeaturesSection";
 import Solutions from "@/components/OurSolution";
 import ReviewVideo from "@/components/ReviewVideo";
 import IndustryInsights from "@/components/IndustryInsights";
+import BlogSection from "@/components/BlogSection";
 import GlobalLocationsMap from "@/components/GlobalLocationsMap";
 import CtaBanner from "@/components/CtaBanner";
 import Footer from "@/components/Footer";
@@ -16,11 +17,11 @@ export default function Home() {
       <Hero />
       <CompanyLogos />
       <AboutAdvantages />
-      {/* <Feature /> */}
       <Solutions />
       <ImpactSection />
       <ReviewVideo />
-      <IndustryInsights />
+      {/* <IndustryInsights /> */}
+      <BlogSection />
       <GlobalLocationsMap />
       <CtaBanner />
       <Footer />
