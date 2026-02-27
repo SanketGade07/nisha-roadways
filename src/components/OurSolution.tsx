@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Container, Truck, Share2, ShieldCheck, ArrowRight } from "lucide-react"
+import { Container, Truck, Share2, ShieldCheck, ArrowRight, Boxes, Sun, Train, Package, Globe, Factory, Ship, Shield, Warehouse, Building2, FlaskConical } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { featuredPartnerLogos } from "@/data/partners"
@@ -23,7 +23,7 @@ const SERVICES = [
   },
   {
     key: "specialized-cargo",
-    title: "Specialized Transport",
+    title: "Green Energy & Niche Movements",
     description: "Expert handling for ODC and delicate solar components.",
     icon: Truck,
     link: "/services#specialized-cargo",
@@ -37,7 +37,7 @@ const SERVICES = [
   },
   {
     key: "multimodal-transport",
-    title: "Integrated Logistics",
+    title: "Alternative Logistics",
     description: "Seamless multimodal connectivity via rail and coastal routes.",
     icon: Share2,
     link: "/services#multimodal-transport",
@@ -51,7 +51,7 @@ const SERVICES = [
   },
   {
     key: "value-added-services",
-    title: "Value-Added Care",
+    title: "Value-Added Services",
     description: "Precision-targeted warehousing and high-value cargo protection.",
     icon: ShieldCheck,
     link: "/services#value-added-services",
@@ -63,6 +63,85 @@ const SERVICES = [
       "/images/partners/tvs.png"
     ]
   }
+]
+
+const DETAILED_SERVICES = [
+  // CATEGORY 1: CONTAINER SOLUTIONS
+  {
+    title: "Empty Container Transportation (ECT)",
+    description: "Exim and domestic empty container services",
+    icon: Boxes,
+    link: "/services/empty-container-transportation"
+  },
+  {
+    title: "Export Import Containers",
+    description: "Exim transport services for international trade",
+    icon: Globe,
+    link: "/services/export-import-containers"
+  },
+  {
+    title: "Domestic Cargo In Our Containers",
+    description: "Secured cargo in owned ISO containers",
+    icon: Truck,
+    link: "/services/domestic-cargo-containers"
+  },
+  // CATEGORY 2: GREEN ENERGY & NICHE MOVEMENTS
+  {
+    title: "Solar Panel & Parts Transportation",
+    description: "Renewable energy components logistics (SolarTransport)",
+    icon: Sun,
+    link: "/services/solar-panel-transportation"
+  },
+  {
+    title: "Over Dimension Cargo (ODC)",
+    description: "Oversized machinery and project cargo",
+    icon: Factory,
+    link: "/services/over-dimension-cargo"
+  },
+  {
+    title: "Bulk Cargo Transportation",
+    description: "Steel coils, grains, construction materials",
+    icon: Warehouse,
+    link: "/services/bulk-cargo-solutions"
+  },
+  // CATEGORY 3: ALTERNATIVE LOGISTICS
+  {
+    title: "Rail Services",
+    description: "Container and bulk cargo by rail",
+    icon: Train,
+    link: "/services/rail-services"
+  },
+  {
+    title: "Coastal Services",
+    description: "Maritime shipping across major Indian ports",
+    icon: Ship,
+    link: "/services/coastal-services"
+  },
+  {
+    title: "LCL Consolidation",
+    description: "Less-than-Container-Load optimization",
+    icon: Package,
+    link: "/services/lcl-consolidation"
+  },
+  // CATEGORY 4: VALUE-ADDED SERVICES
+  {
+    title: "Transportation Of High Value Goods",
+    description: "GPS-tracked premium cargo with security",
+    icon: Shield,
+    link: "/services/high-value-goods"
+  },
+  {
+    title: "Storage and Warehousing",
+    description: "Comprehensive storage solutions",
+    icon: Building2,
+    link: "/services/storage-warehousing"
+  },
+  {
+    title: "Chemical Transportation in Tank Containers",
+    description: "Safe transport for liquids and gases in ISO tanks",
+    icon: FlaskConical,
+    link: "/services/chemical-transportation"
+  },
 ]
 
 export default function OurSolution() {
@@ -87,60 +166,87 @@ export default function OurSolution() {
           {SERVICES.map((service, index) => {
             const Icon = service.icon
             return (
-              <motion.div
-                key={service.key}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.5,
-                  delay: index * 0.1,
-                  ease: [0.21, 0.45, 0.32, 0.9]
-                }}
-                className="group relative flex flex-col items-center text-center px-6 lg:px-8 pb-8 pt-16 bg-[#f0f4fe] rounded-[1.5rem] hover:shadow-xl transition-all duration-500"
-              >
-                {/* Category Icon — half top half under, slightly smaller */}
-                <div className="absolute -top-9 left-1/2 -translate-x-1/2">
-                  <div className="w-[72px] h-[72px] rounded-2xl bg-white shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-500 border border-slate-100">
-                    <Icon className="w-9 h-9 text-blue-600" strokeWidth={1.5} />
-                  </div>
-                </div>
-
-                {/* Title */}
-                <h3 className="text-lg lg:text-xl font-bold text-[#0f172a] mb-1.5">
-                  {service.title}
-                </h3>
-
-                {/* Subtext */}
-                <p className="text-xs font-medium text-slate-500 mb-6">
-                  We work with
-                </p>
-
-                {/* Partner Logos — Forced single line, smaller */}
-                <div className="flex items-center justify-center gap-3 mb-6">
-                  {service.partnerLogos.map((logo, idx) => (
-                    <div key={idx} className="relative w-11 h-5 sm:w-12 sm:h-6">
-                      <Image
-                        src={logo}
-                        alt={service.partners[idx]}
-                        fill
-                        className="object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300"
-                        sizes="60px"
-                      />
-                    </div>
-                  ))}
-                </div>
-
-                {/* Read More Link */}
-                <Link
-                  href={service.link}
-                  className="mt-auto text-xs font-bold text-blue-600 underline underline-offset-4 decoration-blue-500/30 hover:decoration-blue-600 hover:text-blue-700 transition-all font-sans"
+              <Link href={service.link} key={service.key} className="block">
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.5,
+                    delay: index * 0.1,
+                    ease: [0.21, 0.45, 0.32, 0.9]
+                  }}
+                  className="group relative flex flex-col items-center text-center px-6 lg:px-8 pb-12 pt-16 bg-[#f0f4fe] rounded-[1.5rem] hover:shadow-2xl hover:bg-white transition-all duration-500 min-h-full border border-transparent hover:border-blue-100"
                 >
-                  Read more.
-                </Link>
-              </motion.div>
+                  {/* Category Icon */}
+                  <div className="absolute -top-9 left-1/2 -translate-x-1/2">
+                    <div className="w-[72px] h-[72px] rounded-2xl bg-white shadow-lg flex items-center justify-center group-hover:scale-110 group-hover:bg-blue-600 transition-all duration-500 border border-slate-100">
+                      <Icon className="w-9 h-9 text-blue-600 group-hover:text-white transition-all duration-500" strokeWidth={1.5} />
+                    </div>
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="text-lg lg:text-xl font-bold text-[#0f172a] mb-1.5 group-hover:text-blue-600 transition-colors">
+                    {service.title}
+                  </h3>
+
+                  {/* Subtext */}
+                  <p className="text-xs font-medium text-slate-500 mb-6">
+                    We work with
+                  </p>
+
+                  {/* Partner Logos */}
+                  <div className="flex items-center justify-center gap-3">
+                    {service.partnerLogos.map((logo, idx) => (
+                      <div key={idx} className="relative w-11 h-5 sm:w-12 sm:h-6">
+                        <Image
+                          src={logo}
+                          alt={service.partners[idx]}
+                          fill
+                          className="object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+                          sizes="60px"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              </Link>
             )
           })}
+        </div>
+
+        {/* Detailed Services Grid */}
+        <div className="mt-12">
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 xl:gap-4">
+            {DETAILED_SERVICES.map((service, index) => {
+              const Icon = service.icon
+              return (
+                <Link href={service.link} key={index} className="block">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                      duration: 0.4,
+                      delay: index * 0.05,
+                      ease: "easeOut"
+                    }}
+                    className="group flex items-center gap-2.5 py-3 px-4 bg-[#f0f4fe] rounded-[1.25rem] hover:bg-white hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 min-h-full border border-transparent hover:border-blue-100"
+                  >
+                    <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-white shadow-sm border border-slate-100 flex items-center justify-center group-hover:scale-110 group-hover:bg-blue-600 transition-all duration-300">
+                      <Icon className="w-5 h-5 text-blue-600 group-hover:text-white transition-colors duration-300" />
+                    </div>
+                    <div className="flex-grow">
+                      <h4 className="text-[14px] font-bold text-[#0f172a] group-hover:text-blue-600 transition-colors leading-tight">
+                        {service.title}
+                      </h4>
+                    </div>
+                  </motion.div>
+                </Link>
+              )
+            })}
+          </div>
         </div>
       </div>
     </section>

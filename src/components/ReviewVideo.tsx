@@ -431,89 +431,59 @@ const VideoCard: React.FC<{
 
   return (
     <div
-      className="flex-shrink-0 relative rounded-xl sm:rounded-2xl overflow-hidden h-[280px] sm:h-[350px] md:h-[450px] lg:h-[520px] xl:h-[450px] w-[180px] sm:w-[350px] md:w-[320px] lg:w-[380px] xl:w-[330px] group mx-1 sm:mx-2 hover:translate-y-[-10px] mt-[10px] duration-300 transition-all shadow-lg select-none cursor-pointer"
+      className="flex-shrink-0 relative rounded-[18px] overflow-hidden h-[358px] w-[258px] group mx-1 duration-300 transition-all shadow-lg select-none cursor-pointer border border-white/10"
       data-card="true"
       draggable={false}
       onClick={() => onPlayClick(video)}
       style={{ userSelect: 'none', WebkitUserSelect: 'none', MozUserSelect: 'none', msUserSelect: 'none' }}
     >
-      {/* Thumbnail Background - No autoplay, no preload */}
+      {/* Thumbnail Background */}
       <Image
         src={video.thumbnailUrl}
         alt={`${video.reviewerName} testimonial thumbnail`}
         fill
-        sizes="(max-width: 1024px) 50vw, 33vw"
-        className="object-cover object-top transition-transform duration-300 group-hover:scale-105"
+        sizes="258px"
+        className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
         draggable={false}
         unoptimized
       />
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
+      {/* Overlay - Gradient matching Figma */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-90" />
 
-      {/* Play Button - Clickable */}
-      <button
-        onClick={(e) => {
-          e.stopPropagation();
-          onPlayClick(video);
-        }}
-        className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300 group-hover:scale-110 z-20"
-      >
-        <Play className="w-8 h-8" fill="white" />
-      </button>
+      {/* Text Info Overlay */}
+      <div className="absolute bottom-0 left-0 right-0 px-4 pb-3 pt-5 text-white z-10 select-none">
+        <div className="flex items-start justify-between gap-3">
+          {/* Info Content Stack */}
+          <div className="flex flex-col gap-0.5">
+            <div className="flex flex-col gap-0">
+              <h4 className="font-bold text-[15px] select-none leading-tight font-sans tracking-tight text-white uppercase">
+                {video.reviewerName}
+              </h4>
+              <p className="text-[10px] text-white/90 select-none font-normal leading-tight font-sans uppercase">
+                {video.title}
+              </p>
+            </div>
 
-      {/* Text Review Overlay */}
-      <div className="absolute bottom-0 left-0 right-0 p-4 text-white z-10 select-none">
-        {/* Rating Stars */}
-        <div className="flex items-center gap-1 mb-2 select-none">
-          {[...Array(video.rating)].map((_, i) => (
-            <svg key={i} className="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-            </svg>
-          ))}
-        </div>
-
-        {/* Reviewer Name and Title */}
-        <div className="mb-2 select-none">
-          <h4 className="font-bold text-sm sm:text-base mb-1 select-none">{video.reviewerName}</h4>
-          <p className="text-xs sm:text-sm text-gray-200 font-medium select-none">{video.title}</p>
-        </div>
-
-        {/* Transcript Preview */}
-        <div className="relative select-none">
-          <p className="text-xs sm:text-sm leading-relaxed line-clamp-3 opacity-90 select-none">
-            &quot;{video.transcript}&quot;
-          </p>
-
-          {/* Read More Gradient */}
-          <div className="absolute bottom-0 right-0 w-8 h-4 bg-gradient-to-l from-black/80 to-transparent" />
-        </div>
-
-        {/* Hover State - Brief Preview */}
-        <div className="absolute inset-0 bg-black/90 pt-2 pb-4 px-6 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-start select-none">
-          <div className="text-center select-none">
-            <div className="flex items-center justify-center gap-1 mb-2 select-none">
-              {[...Array(video.rating)].map((_, i) => (
-                <svg key={i} className="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+            {/* Rating Stars - Integrated into vertical stack */}
+            <div className="flex items-center gap-[1px] select-none">
+              {[...Array(5)].map((_, i) => (
+                <svg
+                  key={i}
+                  style={{ width: '14.32px', height: '13.69px' }}
+                  className={`${i < video.rating ? 'text-[#FFD700] fill-current' : 'text-gray-600 fill-current'}`}
+                  viewBox="0 0 20 20"
+                >
                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                 </svg>
               ))}
             </div>
-            <h4 className="font-bold text-base mb-1 select-none">{video.reviewerName}</h4>
-            <p className="text-xs text-gray-300 mb-2 select-none">{video.title}</p>
-            <p className="text-xs leading-relaxed text-gray-200 line-clamp-2 mb-3 select-none">
-              &quot;{video.transcript.length > 80 ? video.transcript.substring(0, 80) + '...' : video.transcript}&quot;
-            </p>
-            <div className="mt-1 flex justify-center">
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  onPlayClick(video);
-                }}
-                className="bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition-colors duration-200 select-none"
-              >
-                Watch Full Video
-              </button>
+          </div>
+
+          {/* Right Side: Play Icon - White circle with small triangle */}
+          <div className="flex-shrink-0 mt-[-4px]">
+            <div className="w-[25px] h-[25px] bg-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+              <Play className="w-[10px] h-[10px] text-black ml-0.5" fill="black" />
             </div>
           </div>
         </div>
