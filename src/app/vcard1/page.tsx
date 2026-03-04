@@ -270,7 +270,7 @@ const VCard1 = () => {
 
                         <div className="bg-white p-2.5 rounded-[20px] flex justify-center relative z-10 shadow-xl group-hover:scale-[1.03] transition-transform duration-300">
                             <QRCodeCanvas
-                                value={pageUrl || "https://nisharoadways.com/vcard1"}
+                                value={pageUrl || "https://nisha-roadways-3tm7.vercel.app/vcard1"}
                                 size={90}
                                 bgColor={"#ffffff"}
                                 fgColor={"#1e1e26"}
@@ -384,7 +384,7 @@ const VCard1 = () => {
                             </div>
                             <div className="bg-white p-6 rounded-[30px] flex items-center justify-center mb-6 shadow-xl border border-gray-100">
                                 <QRCodeCanvas
-                                    value={pageUrl || "https://nisharoadways.com/vcard1"}
+                                    value={pageUrl || "https://nisha-roadways-3tm7.vercel.app/vcard1"}
                                     size={200}
                                     bgColor={"#ffffff"}
                                     fgColor={"#1e1e26"}
