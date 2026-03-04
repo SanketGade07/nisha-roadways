@@ -23,8 +23,22 @@ import {
     FaMoon
 } from 'react-icons/fa';
 import { IoMdMore, IoMdClose, IoMdSend } from "react-icons/io";
-import { MdMessage, MdEmail, MdCall, MdChat } from "react-icons/md";
+import { MdEmail, MdCall, MdChat } from "react-icons/md";
 import { QRCodeCanvas } from 'qrcode.react';
+
+interface Theme {
+    bg: string;
+    card: string;
+    border: string;
+    text: string;
+    title: string;
+    subCard: string;
+    subBorder: string;
+    accent: string;
+    accentHover: string;
+    muted: string;
+    logoBg: string;
+}
 
 const VCard1 = () => {
     const [showQRPopup, setShowQRPopup] = React.useState(false);
@@ -41,7 +55,7 @@ const VCard1 = () => {
 
     if (!isMounted) return null;
 
-    const theme = {
+    const theme: Theme = {
         bg: isDarkMode ? 'bg-[#111116]' : 'bg-white',
         card: isDarkMode ? 'bg-[#1e1e26]' : 'bg-gray-50',
         border: isDarkMode ? 'border-[#2d2d3a]' : 'border-gray-200',
@@ -223,7 +237,6 @@ const VCard1 = () => {
                         <ContactItem
                             icon={<FaEnvelope size={14} className="text-blue-500 group-hover:text-white transition-colors" />}
                             text={companyDetails.email}
-                            truncate
                             theme={theme}
                             isDarkMode={isDarkMode}
                         />
@@ -519,7 +532,7 @@ const VCard1 = () => {
 };
 
 // Helper component for contact items
-const ContactItem = ({ icon, text, truncate = false, theme, isDarkMode }: { icon: React.ReactNode, text: string, truncate?: boolean, theme: any, isDarkMode: boolean }) => (
+const ContactItem = ({ icon, text, theme, isDarkMode }: { icon: React.ReactNode, text: string, theme: Theme, isDarkMode: boolean }) => (
     <div className="flex items-center gap-4 w-full group">
         <div className={`w-10 h-10 ${theme.subCard} rounded-xl flex items-center justify-center p-2 shrink-0 border ${theme.subBorder} group-hover:bg-blue-500 transition-all shadow-md duration-500`}>
             {icon}
