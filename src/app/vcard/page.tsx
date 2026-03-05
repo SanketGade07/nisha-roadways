@@ -360,7 +360,7 @@ export default function VCardPage() {
                 {/* Form Button with Fluid Design */}
                 <button
                   onClick={() => setShowContactForm(true)}
-                  className="w-full bg-blue-600 text-white rounded-lg font-medium flex items-center justify-center hover:bg-blue-700 transition-colors"
+                  className="w-full bg-[#1556F1] text-white rounded-lg font-medium flex items-center justify-center hover:bg-[#0d47d1] transition-colors"
                   style={{
                     marginTop: 'clamp(0.5rem, 2vw, 1rem)',
                     padding: 'clamp(0.5rem, 2vw, 0.75rem)',

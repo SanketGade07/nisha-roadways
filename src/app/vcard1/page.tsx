@@ -339,7 +339,7 @@ const VCard1 = () => {
                         </div>
                         <button
                             onClick={() => setShowContactForm(true)}
-                            className="bg-blue-600 hover:bg-blue-500 px-8 py-3 rounded-xl font-bold text-white shadow-lg shadow-blue-500/20 transition-all active:scale-95 flex items-center gap-2"
+                            className="bg-[#1556F1] hover:bg-[#0d47d1] px-8 py-3 rounded-xl font-bold text-white shadow-lg shadow-blue-500/20 transition-all active:scale-95 flex items-center gap-2"
                         >
                             <FaPaperPlane size={14} />
                             Contact Form

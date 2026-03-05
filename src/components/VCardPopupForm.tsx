@@ -99,7 +99,7 @@ export default function VCardPopupForm({ show, onClose }: VCardPopupFormProps) {
             transition={{ type: "spring", stiffness: 300, damping: 25 }}
           >
             {/* Top Bar with Icon */}
-            <div className="bg-blue-600 rounded-t-xl sm:rounded-t-3xl flex items-center gap-2 sm:gap-3 px-3 py-3 sm:px-8 sm:py-5">
+            <div className="bg-[#1556F1] rounded-t-xl sm:rounded-t-3xl flex items-center gap-2 sm:gap-3 px-3 py-3 sm:px-8 sm:py-5">
               <FaRegPaperPlane className="text-white text-xl sm:text-2xl" />
               <h2 className="text-base sm:text-xl md:text-2xl font-bold text-white tracking-wide">Contact Us</h2>
               <button
@@ -173,7 +173,7 @@ export default function VCardPopupForm({ show, onClose }: VCardPopupFormProps) {
                 </select>
                 <motion.button
                   type="submit"
-                  className="w-full bg-blue-600 text-white py-2.5 sm:py-3 rounded-full font-bold shadow-md hover:bg-blue-700 transition-all duration-200 text-sm sm:text-lg tracking-wide flex items-center justify-center gap-2"
+                  className="w-full bg-[#1556F1] text-white py-2.5 sm:py-3 rounded-full font-bold shadow-md hover:bg-[#0d47d1] transition-all duration-200 text-sm sm:text-lg tracking-wide flex items-center justify-center gap-2"
                   disabled={loading}
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.98 }}

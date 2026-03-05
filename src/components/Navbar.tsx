@@ -222,7 +222,7 @@ export default function Navbar() {
             {/* Desktop CTA Button */}
             <div className="hidden lg:block">
               <Link href="/contact">
-                <Button className="px-8 py-2 md:h-11 !bg-[#D13B3D] !bg-none hover:!bg-[#b83436] text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
+                <Button className="px-8 py-2 md:h-11 !bg-[#1556F1] !bg-none hover:!bg-[#0d47d1] text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
                   Contact Us
                 </Button>
               </Link>
@@ -345,7 +345,7 @@ export default function Navbar() {
                         <Link
                           href="/contact"
                           onClick={() => setIsMobileMenuOpen(false)}
-                          className="w-full py-4 text-base font-medium !bg-[#D13B3D] !bg-none hover:!bg-[#b83436] text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center"
+                          className="w-full py-4 text-base font-medium !bg-[#1556F1] !bg-none hover:!bg-[#0d47d1] text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center"
                         >
                           Contact Us
                         </Link>

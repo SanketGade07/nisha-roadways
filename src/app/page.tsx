@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import ImpactSection from "@/components/ImpactSection";
 import CompanyLogos from "@/components/CompanyLogos";
 import AboutAdvantages from "@/components/AboutAdvantages";
+import SpecializedCategories from "@/components/SpecializedCategories";
 import Solutions from "@/components/OurSolution";
 import ReviewVideo from "@/components/ReviewVideo";
 import BlogSection from "@/components/BlogSection";
@@ -15,7 +16,8 @@ export default function Home() {
       <Hero />
       <CompanyLogos />
       <AboutAdvantages />
-      <Solutions />
+      <SpecializedCategories />
+      {/* <Solutions /> */}
       <ImpactSection />
       <ReviewVideo />
       {/* <IndustryInsights /> */}
