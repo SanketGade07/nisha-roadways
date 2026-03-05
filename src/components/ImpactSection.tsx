@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 
-const Counter = ({ end, duration = 3000 }: { end: number; duration?: number }) => {
+const Counter = ({ end, duration = 3000, className = "", style = {} }: { end: number; duration?: number; className?: string; style?: React.CSSProperties }) => {
     const [count, setCount] = useState(0);
     const elementRef = useRef<HTMLSpanElement>(null);
     const [hasStarted, setHasStarted] = useState(false);
@@ -51,7 +51,7 @@ const Counter = ({ end, duration = 3000 }: { end: number; duration?: number }) =
         return () => cancelAnimationFrame(animationFrame);
     }, [hasStarted, end, duration]);
 
-    return <span ref={elementRef}>{count}</span>;
+    return <span ref={elementRef} className={className} style={style}>{count}</span>;
 };
 
 const stats = [
@@ -69,15 +69,15 @@ const stats = [
     },
     {
         prefix: "$",
-        number: 10,
+        number: 5,
         suffix: "B",
         label: "Invested in global logistics network",
     },
     {
         prefix: "",
-        number: 65,
+        number: 55,
         suffix: "%",
-        label: "Electricity sourced from renewable energy projects in 2024",
+        label: "Electricity sourced from renewable energy projects in 2025",
     },
 ];
 
@@ -85,55 +85,56 @@ export default function ImpactSection() {
     return (
         <section
             style={{
-                background: "linear-gradient(to bottom right, oklch(27.9% 0.041 260.031) 0%, oklch(37.9% 0.146 265.522) 50%, oklch(35.9% 0.144 278.697) 100%)"
+                background: "linear-gradient(277.86deg, #332E86 0%, #1D388E 37.33%, #21378D 58.95%, #1D2A43 100%)",
+                minHeight: "485px"
             }}
-            className="pt-16 sm:pt-20 pb-24 sm:pb-32 text-white overflow-hidden"
+            className="flex flex-col justify-center text-white overflow-hidden font-branding py-12 lg:py-0"
         >
-            <div className="max-w-screen-xl mx-auto px-6">
+            <div className="max-w-screen-xl mx-auto px-6 w-full">
                 {/* Header Content */}
-                <div className="text-center mb-10 sm:mb-12">
-                    <p className="text-[14px] font-semibold tracking-[0.2em] mb-5 uppercase">
+                <div className="text-center mb-8">
+                    <p className="text-[18px] !font-semibold tracking-[0.05em] mb-4 uppercase leading-[40px]">
                         MAKE AN IMPACT
                     </p>
-                    <h2 className="text-3xl sm:text-5xl md:text-[64px] font-[900] leading-[1.1] mb-6 max-w-7xl mx-auto uppercase tracking-tighter flex flex-col items-center">
-                        <span>WE MOVE 10% OF GLOBAL</span>
-                        <span>TRADE DAILY</span>
+                    <h2 className="text-[32px] sm:text-[48px] md:text-[64px] !font-bold leading-[55px] mb-8 max-w-[970px] mx-auto uppercase tracking-normal">
+                        WE MOVE 10% OF GLOBAL <br />
+                        TRADE DAILY
                     </h2>
-                    <p className="text-white text-[18px] sm:text-[20px] font-normal max-w-4xl mx-auto leading-relaxed opacity-90 flex flex-col items-center">
-                        <span>Nisha Roadways plays a vital role in keeping global trade moving by connecting economies,</span>
-                        <span>industries and businesses worldwide.</span>
+                    <p className="text-[#B4B4B4] text-[18px] !font-medium max-w-[841px] mx-auto leading-[27px] mb-12">
+                        Nisha Roadways plays a vital role in keeping global trade moving by connecting <br />
+                        economies,industries and businesses worldwide.
                     </p>
                 </div>
 
                 {/* Stats Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-10 sm:mt-12 gap-0">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0">
                     {stats.map((stat, index) => (
                         <div
                             key={index}
-                            className="flex flex-col items-center text-center py-10 md:py-12 px-6 relative"
+                            className="flex flex-col items-center text-center px-4 relative"
                         >
                             {/* Vertical Line Divider */}
                             {index !== stats.length - 1 && (
-                                <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-[1px] h-48 bg-gradient-to-b from-transparent via-[#d5d5dd]/50 to-transparent"></div>
+                                <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-[1px] h-32 bg-white/20"></div>
                             )}
 
                             <div className="flex flex-col items-center">
-                                <div className="flex items-start mb-3">
+                                <div className="flex items-baseline mb-2 text-white">
                                     {stat.prefix && (
-                                        <span className="text-3xl lg:text-[45px] font-bold leading-none mr-1 mt-3">
+                                        <span className="text-[20px] leading-[40px] mb-0 mr-1" style={{ fontWeight: 600 }}>
                                             {stat.prefix}
                                         </span>
                                     )}
-                                    <span className="text-6xl lg:text-[100px] font-bold tracking-tighter leading-none">
-                                        <Counter end={stat.number} />
+                                    <span className="text-[60px] tracking-tighter leading-none" style={{ fontWeight: 900 }}>
+                                        <Counter end={stat.number} className="text-white" style={{ fontWeight: 900 }} />
                                     </span>
                                     {stat.suffix && (
-                                        <span className="text-3xl lg:text-[45px] font-bold ml-1 self-end leading-none pb-4 uppercase">
+                                        <span className="text-[20px] ml-1 leading-[40px] uppercase" style={{ fontWeight: 600 }}>
                                             {stat.suffix}
                                         </span>
                                     )}
                                 </div>
-                                <p className="text-[16px] lg:text-[18px] font-normal leading-snug max-w-[220px] opacity-100 italic sm:not-italic">
+                                <p className="text-[16px] !font-normal text-[#FFFFFF] max-w-[224px] leading-[1.2]">
                                     {stat.label}
                                 </p>
                             </div>

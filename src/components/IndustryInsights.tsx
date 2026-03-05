@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
-/*
+
 const INSIGHTS = [
     {
         title: "Cost- Effective Solutions For Freight Shipping",
@@ -35,23 +35,28 @@ const INSIGHTS = [
 
 export default function IndustryInsights() {
     return (
-        <section className="relative pt-12 pb-16 bg-white overflow-hidden">
+        <section className="relative pt-12 pb-16 bg-white overflow-hidden font-branding">
             <div className="max-w-[1440px] mx-auto px-6">
                 <div className="max-w-[1143px] mx-auto">
                     <div className="flex flex-col mb-12">
                         <div className="flex justify-between items-start mb-4">
-                            <h2 className="text-[34px] font-semibold text-black leading-[40px] max-w-[800px]">
+                            <h2 className="text-[34px] !font-semibold text-black leading-[40px] max-w-[800px] tracking-normal">
                                 Industry Insights & Logistics Trends
                             </h2>
                             <Link
                                 href="/blog"
-                                className="bg-[#1556F1] text-white px-6 py-3 rounded-full flex items-center gap-2 text-[14px] font-semibold hover:bg-[#0D3087] transition-colors"
+                                className="text-white rounded-full flex items-center justify-center gap-2 text-[14px] !font-semibold hover:opacity-90 transition-all"
+                                style={{
+                                    background: "linear-gradient(90deg, #1559F8 0%, #193CBB 100%)",
+                                    width: "145px",
+                                    height: "42px"
+                                }}
                             >
-                                Sell More
+                                Sell more
                                 <ArrowUpRight className="w-4 h-4" />
                             </Link>
                         </div>
-                        <p className="text-[18px] font-medium text-[#7A7A7A] leading-[27px] max-w-[738px]">
+                        <p className="text-[18px] !font-medium text-[#9B9B9B] leading-[27px] max-w-[738px]">
                             Stay updated with the latest in supply chain transformation, container optimization, and logistics innovation.
                         </p>
                     </div>
@@ -60,14 +65,19 @@ export default function IndustryInsights() {
                         {INSIGHTS.map((item, index) => (
                             <div
                                 key={index}
-                                className="bg-white rounded-[15px] p-[15px] flex flex-col border border-[#EBEBEB] transition-all duration-300 hover:shadow-lg"
+                                className="bg-white flex flex-col transition-all duration-300 hover:scale-[1.01]"
                                 style={{
-                                    boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.03)",
+                                    borderRadius: "8.84px",
+                                    filter: "drop-shadow(0 0 3.4px rgba(0, 0, 0, 0.25))",
                                     width: "267.7px",
-                                    height: "345.94px"
+                                    height: "345.94px",
+                                    padding: "8px 9px" // Tight padding to match 8.84 radius aesthetics
                                 }}
                             >
-                                <div className="relative w-full h-[170px] mb-4 overflow-hidden rounded-[10px]">
+                                <div
+                                    className="relative w-full overflow-hidden"
+                                    style={{ height: "198.89px", borderRadius: "8.84px" }}
+                                >
                                     <Image
                                         src={item.image}
                                         alt={item.title}
@@ -76,16 +86,16 @@ export default function IndustryInsights() {
                                     />
                                 </div>
 
-                                <div className="flex flex-col flex-1 px-1">
-                                    <h3 className="font-semibold text-[17px] leading-[20px] text-[#1A1A1A] mb-2 line-clamp-3">
+                                <div className="flex flex-col flex-1 pt-4 pb-2 px-1">
+                                    <h3 className="!font-semibold text-[17px] leading-[16.97px] text-[#000000] mb-2 line-clamp-3">
                                         {item.title}
                                     </h3>
-                                    <p className="font-normal text-[11.9px] leading-[15.3px] text-[#707070] mb-auto">
+                                    <p className="!font-normal text-[11.9px] leading-[15.3px] text-[#707070] mb-auto">
                                         {item.date} <span className="mx-1">-</span> {item.comments}
                                     </p>
                                     <Link
                                         href="#"
-                                        className="font-normal text-[9.43px] leading-[15.3px] text-[#707070] hover:text-[#1556F1] transition-colors mt-4 block underline underline-offset-4 decoration-[#D0D0D0]"
+                                        className="!font-normal text-[9.43px] leading-[15.3px] text-[#707070] hover:text-[#1556F1] transition-colors mt-2 block underline"
                                     >
                                         Read more
                                     </Link>
@@ -98,5 +108,3 @@ export default function IndustryInsights() {
         </section>
     );
 }
-*/
-export default function IndustryInsights() { return null; }
