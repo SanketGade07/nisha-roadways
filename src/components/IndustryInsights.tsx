@@ -37,7 +37,7 @@ export default function IndustryInsights() {
     return (
         <section className="relative pt-12 pb-16 bg-white overflow-hidden font-branding">
             <div className="max-w-[1440px] mx-auto px-6">
-                <div className="max-w-[1143px] mx-auto">
+                <div className="max-w-[1232px] mx-auto">
                     <div className="flex flex-col mb-12">
                         <div className="flex justify-between items-start mb-4">
                             <h2 className="text-[34px] !font-semibold text-black leading-[40px] max-w-[800px] tracking-normal">

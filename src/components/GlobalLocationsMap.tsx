@@ -133,7 +133,7 @@ const MapInternal = ({ geoData, L }: { geoData: any; L: any }) => {
     };
 
     return (
-        <div className="w-full relative overflow-hidden bg-white border border-gray-100 rounded-[20px] z-10" style={{ maxWidth: '1232px', height: '520px' }}>
+        <div className="w-full relative overflow-hidden bg-white border border-gray-100 rounded-[20px] z-10" style={{ maxWidth: '1232px', height: '585.62px' }}>
             <MapContainer
                 center={[20, 78]}
                 zoom={3.9}
