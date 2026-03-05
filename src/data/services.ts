@@ -162,7 +162,7 @@ export const servicesData: ServiceData[] = [
     slug: "solar-panel-transportation",
     title: "Specialized Solar Transportation",
     subtitle: "We launched our dedicated solar transportation team two years ago to support India's renewable energy growth. We move solar panels from ports, warehouses, and manufacturing units across India.",
-    heroImage: "/images/use-everywhere/images3.png",
+    heroImage: "/images/specialized-solor-transportation/solor-transport-main.png",
     about: {
       title: "Why Solar Cargo Needs Specialists",
       description: "Solar panels are fragile—they crack under pressure, break during improper loading, and get damaged by vibrations. Our team understands proper stacking, securing methods, and road conditions. We've trained drivers specifically for this cargo type and use specialized equipment including 40-foot and 20-foot container vehicles, plus open trailers with proper lashing points and tarpaulin coverage.",
@@ -170,7 +170,7 @@ export const servicesData: ServiceData[] = [
         { value: "2 Years", label: "Expertise" },
         { value: "5+", label: "Equipment Types" }
       ],
-      image: "/images/use-everywhere/images1.png"
+      image: "/images/specialized-solor-transportation/solor-transport-main.png"
     },
     keyBenefits: [
       { title: "Why Solar Cargo Needs Specialists", description: "Solar panels are fragile. Our team understands proper stacking, securing methods, and road conditions. We've trained drivers specifically for this cargo type." },

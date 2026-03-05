@@ -1,11 +1,6 @@
 import Footer from "@/components/Footer";
-import CtaBanner from "@/components/CtaBanner";
 import { ServiceData } from "@/data/services";
 import ServiceHero from "./services/ServiceHero";
-import ServiceAbout from "./services/ServiceAbout";
-import ServiceBenefits from "./services/ServiceBenefits";
-import ServiceSpecs from "./services/ServiceSpecs";
-import ServiceProcess from "./services/ServiceProcess";
 
 interface ServiceTemplateProps {
   service: ServiceData;
@@ -21,19 +16,6 @@ export default function ServiceTemplate({ service }: ServiceTemplateProps) {
         heroImage={service.heroImage}
       />
 
-      <ServiceAbout
-        title={service.about.title}
-        description={service.about.description}
-        stats={service.about.stats}
-      />
-
-      <ServiceBenefits benefits={service.keyBenefits} />
-
-      <ServiceSpecs specs={service.technicalSpecs} />
-
-      <ServiceProcess steps={service.process} />
-
-      <CtaBanner />
       <Footer />
     </div>
   );
