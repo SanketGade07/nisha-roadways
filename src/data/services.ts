@@ -19,6 +19,7 @@ export interface ServiceData {
   technicalSpecs: Array<{
     title: string;
     description: string;
+    image?: string;
   }>;
   industries: Array<{
     title: string;
@@ -179,10 +180,26 @@ export const servicesData: ServiceData[] = [
       { title: "Insurance", description: "We recommend insurance for all solar cargo. Coverage available based on invoice value or declared value." }
     ],
     technicalSpecs: [
-      { title: "Container Vehicles", description: "40-foot container vehicles for maximum protection, 20-foot container vehicles for smaller loads" },
-      { title: "Open Trailers", description: "Designed for solar panel loading, Proper lashing points, Tarpaulin coverage for weather protection" },
-      { title: "From Where to Where", description: "From ports (Mundra, JNPT, Chennai), From warehouses (CFS and private warehouses), From manufacturers (Domestic solar units), To sites (Solar farms, rooftop installations, distributor warehouses)" },
-      { title: "Our Process", description: "Pre-loading inspection -> Floor padding -> Systematic panel stacking -> Professional lashing -> GPS tracking -> Careful offloading" }
+      {
+        title: "Container Vehicles",
+        description: "40-foot container vehicles for maximum protection, 20-foot container vehicles for smaller loads",
+        image: "/images/specialized-solor-transportation/container-vehicles-card.png"
+      },
+      {
+        title: "Open Trailers",
+        description: "Designed for solar panel loading, Proper lashing points, Tarpaulin coverage for weather protection",
+        image: "/images/specialized-solor-transportation/open-trailer-card.png"
+      },
+      {
+        title: "From Where to Where",
+        description: "From ports (Mundra, JNPT, Chennai), From warehouses (CFS and private warehouses), From manufacturers (Domestic solar units)",
+        image: "/images/specialized-solor-transportation/from-where-to-where-card.jpg"
+      },
+      {
+        title: "Our Process",
+        description: "Pre-loading inspection -> Floor padding -> Systematic panel stacking -> Professional lashing -> GPS tracking -> Careful offloading",
+        image: "/images/specialized-solor-transportation/our-process-card.jpg"
+      }
     ],
     industries: [
       { title: "Solar Manufacturers", description: "Solar panel and component manufacturers" },

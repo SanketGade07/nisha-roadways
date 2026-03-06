@@ -1,11 +1,11 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Settings, Layers, Truck, Package } from "lucide-react";
+import Image from "next/image";
 
 interface Spec {
     title: string;
     description: string;
+    image?: string;
 }
 
 interface ServiceSpecsProps {
@@ -13,67 +13,75 @@ interface ServiceSpecsProps {
 }
 
 export default function ServiceSpecs({ specs }: ServiceSpecsProps) {
-    const specIcons = [Settings, Layers, Truck, Package];
-    const colors = [
-        { bg: "from-blue-600 to-indigo-600" },
-        { bg: "from-emerald-500 to-teal-600" },
-        { bg: "from-orange-500 to-red-500" },
-        { bg: "from-purple-600 to-pink-600" },
-    ];
-
     return (
-        <section className="relative py-20 bg-slate-50 overflow-hidden">
-            <div className="w-full px-8 sm:px-12 lg:px-16 xl:px-20 2xl:px-24 relative z-10">
+        <section id="specs" className="relative py-20 bg-white overflow-hidden font-branding scroll-mt-32">
+            <div className="max-w-[1440px] mx-auto px-8 sm:px-12 lg:px-20 relative z-10">
                 {/* Section Header */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    className="max-w-3xl mb-12"
-                >
-                    <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 leading-tight tracking-tight mb-3">
-                        Specifications & Details
+                <div className="max-w-3xl mb-10">
+                    <h2 className="text-[40px] font-semibold text-[#000000] leading-[40px] mb-2">
+                        Specifications &amp; Details
                     </h2>
-                    <p className="text-base text-slate-600 leading-relaxed">
+                    <p className="text-[16px] font-medium text-[#62748E] leading-[40px] max-w-[645px]">
                         Everything you need to know about our service capabilities.
                     </p>
-                </motion.div>
+                </div>
 
                 {/* Specs Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-                    {specs.map((spec, index) => {
-                        const IconComponent = specIcons[index % specIcons.length];
-                        const color = colors[index % colors.length];
-
-                        return (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.4, delay: index * 0.08 }}
-                                className="group"
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    {specs.map((spec, index) => (
+                        <div
+                            key={index}
+                            className="relative filter drop-shadow-[0_0_3.4px_rgba(0,0,0,0.15)]"
+                        >
+                            <div
+                                className="w-full bg-white p-[8px] flex flex-col"
+                                style={{
+                                    clipPath: 'polygon(0 0, 82% 0, 100% 16%, 100% 100%, 0 100%)',
+                                }}
                             >
-                                <div className="relative h-full bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg border border-slate-100 hover:border-slate-200 transition-all duration-300">
-                                    {/* Icon */}
-                                    <div className={`w-12 h-12 bg-gradient-to-br ${color.bg} rounded-xl flex items-center justify-center mb-5 group-hover:scale-105 transition-transform duration-300`}>
-                                        <IconComponent className="w-6 h-6 text-white" />
+                                {/* Image Container — fixed height matching SpecializedCategories */}
+                                <div className="w-full h-[185px] relative overflow-hidden rounded-[4px] flex-shrink-0">
+                                    <div
+                                        className="absolute inset-0 z-10"
+                                        style={{
+                                            clipPath: 'polygon(0 0, 82% 0, 100% 25%, 100% 100%, 0 100%)',
+                                        }}
+                                    >
+                                        <Image
+                                            src={spec.image || "/images/use-everywhere/images1.png"}
+                                            alt={spec.title}
+                                            fill
+                                            className="object-cover"
+                                        />
                                     </div>
+                                </div>
 
-                                    {/* Title */}
-                                    <h3 className="text-lg font-bold text-slate-900 mb-3">
+                                {/* Info — fixed height so all cards align */}
+                                <div className="px-[12px] pt-[18px] pb-[12px] min-h-[113px]">
+                                    <h3
+                                        className="text-[#000000] font-semibold mb-[6px]"
+                                        style={{
+                                            fontSize: '18px',
+                                            fontWeight: 600,
+                                            lineHeight: '19px',
+                                        }}
+                                    >
                                         {spec.title}
                                     </h3>
-
-                                    {/* Description */}
-                                    <p className="text-sm text-slate-500 leading-relaxed">
+                                    <p
+                                        className="text-[#757679]"
+                                        style={{
+                                            fontSize: '10px',
+                                            fontWeight: 500,
+                                            lineHeight: '15.3px',
+                                        }}
+                                    >
                                         {spec.description}
                                     </p>
                                 </div>
-                            </motion.div>
-                        );
-                    })}
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
         </section>

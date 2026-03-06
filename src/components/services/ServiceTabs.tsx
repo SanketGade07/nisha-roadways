@@ -15,18 +15,18 @@ const TABS = [
 
 export default function ServiceTabs({ activeTab }: ServiceTabsProps) {
     return (
-        <div className="w-full bg-white border-b border-gray-200 sticky top-[80px] z-30 font-branding">
+        <div className="w-full bg-white border-y border-[#8D8D8D]/50 sticky top-[80px] z-30 font-branding">
             <div className="max-w-[1440px] mx-auto px-8 sm:px-12 lg:px-20">
-                <div className="flex items-center gap-12 h-16">
+                <div className="flex items-center gap-[28px] h-[59px]">
                     {TABS.map((tab) => (
                         <button
                             key={tab.id}
-                            className={`relative h-full text-[14px] !font-semibold transition-colors hover:text-[#1557F3] ${activeTab === tab.id ? "text-black" : "text-[#707070]"
+                            className={`relative h-full text-[15px] transition-colors hover:text-black ${activeTab === tab.id ? "text-black font-semibold" : "text-[#414141] font-normal"
                                 }`}
                             onClick={() => {
                                 const element = document.getElementById(tab.id);
                                 if (element) {
-                                    const offset = 144; // Navbar (80) + Tabs (64)
+                                    const offset = 139; // Navbar (80) + Tabs (59)
                                     const bodyRect = document.body.getBoundingClientRect().top;
                                     const elementRect = element.getBoundingClientRect().top;
                                     const elementPosition = elementRect - bodyRect;
@@ -41,7 +41,7 @@ export default function ServiceTabs({ activeTab }: ServiceTabsProps) {
                         >
                             {tab.label}
                             {activeTab === tab.id && (
-                                <div className="absolute bottom-0 left-0 w-full h-[3px] bg-[#1557F3]"></div>
+                                <div className="absolute bottom-0 left-0 w-full h-[4px] bg-[#000000] rounded-full"></div>
                             )}
                         </button>
                     ))}
@@ -50,3 +50,4 @@ export default function ServiceTabs({ activeTab }: ServiceTabsProps) {
         </div>
     );
 }
+
