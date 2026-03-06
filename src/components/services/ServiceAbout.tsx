@@ -97,18 +97,27 @@ export default function ServiceAbout({ title, description, stats }: ServiceAbout
 
                             {/* Trusted By Badge */}
                             <div className="w-full max-w-[547px] h-[101px] flex items-center gap-6 px-8 rounded-[20px] border border-[#D0D9F0] bg-white shadow-sm">
-                                <div className="flex -space-x-[28px]">
+                                <div className="flex -space-x-[26px]">
                                     {[
-                                        { color: "#D9D9D9", z: 10 },
-                                        { color: "#A1A0A0", z: 20 },
-                                        { color: "#838080", z: 30 },
-                                        { color: "#686666", z: 40 }
-                                    ].map((circle, i) => (
+                                        { src: "/images/partners/orient_overseas_conatainer_line-removebg-preview.png", z: 10 },
+                                        { src: "/images/partners/msc_cruises-removebg-preview.png", z: 20 },
+                                        { src: "/images/partners/DP_World_2021_logo.svg", z: 30 },
+                                        { src: "/images/partners/tvs-removebg-preview.png", z: 40 }
+                                    ].map((logo, i) => (
                                         <div
                                             key={i}
-                                            className="w-[46px] h-[46px] rounded-full relative shrink-0"
-                                            style={{ backgroundColor: circle.color, zIndex: circle.z }}
-                                        ></div>
+                                            className="w-[48px] h-[48px] rounded-full border-2 border-white bg-white flex items-center justify-center overflow-hidden shadow-sm relative shrink-0"
+                                            style={{ zIndex: logo.z }}
+                                        >
+                                            <div className="relative w-9 h-9">
+                                                <Image
+                                                    src={logo.src}
+                                                    alt="Partner Logo"
+                                                    fill
+                                                    className="object-contain"
+                                                />
+                                            </div>
+                                        </div>
                                     ))}
                                 </div>
                                 <div className="flex flex-col justify-center">

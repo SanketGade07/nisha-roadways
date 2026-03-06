@@ -177,14 +177,19 @@ export const partnerLogos: Record<string, string> = {
 
 // Featured logos for the trusted section on homepage
 export const featuredPartnerLogos = [
-    { src: "/images/trustedby/66a9340e1605ced8fc1169b2_American%20Express%20(1).svg", alt: "American Express" },
-    { src: "/images/trustedby/681e138d809d7f9a38ef5047_1stPhorm-Shipping.svg", alt: "1st Phorm" },
-    { src: "/images/trustedby/681e13a611dc99e337260e81_Ebay-Shipping.svg", alt: "eBay" },
-    { src: "/images/trustedby/681e13c4f86063e563b5c1c5_RayBan-Shipping.svg", alt: "Ray-Ban" },
-    { src: "/images/trustedby/681e13e3e7b124d653b8cefa_Nomad-Shipping.svg", alt: "Nomad" },
-    { src: "/images/trustedby/681e141150ed2e62414d2bb3_Shopify-Shipping.svg", alt: "Shopify" },
-    { src: "/images/trustedby/681e14287d9a926535567008_Luxottica-Shipping.svg", alt: "Luxottica" },
-    { src: "/images/trustedby/681e144908dfd61fdd236ae0_Orbitkey-Shipping.svg", alt: "Orbitkey" },
-    { src: "/images/trustedby/681e148cd1bd071d6be21b6d_TargetOptical.svg", alt: "Target Optical" },
-    { src: "/images/trustedby/681e14eac391f84c067ac332_Oakley-Shipping.svg", alt: "Oakley" }
+    { src: "/images/partners/DP_World_2021_logo.svg", alt: "DP World", scale: 1.0 },
+    { src: "/images/partners/dhl-removebg-preview.png", alt: "DHL", scale: 2 },
+    { src: "/images/partners/kuehne_nagel-removebg-preview.png", alt: "Kuehne Nagel", scale: 2.5 },
+    { src: "/images/partners/Aavana_on-White-BG.png", alt: "Avana", scale: 1.0 },
+    { src: "/images/partners/tvs-removebg-preview.png", alt: "TVS", scale: 1.0 },
+    { src: "/images/partners/maersk-logo-5Rmy2WJH_t-removebg-preview.png", alt: "Maersk", scale: 1.5 },
+    { src: "/images/partners/msc_cruises-removebg-preview.png", alt: "MSC", scale: 1.0 },
+    { src: "/images/partners/hapag-lloyd-removebg-preview.png", alt: "Hapag-Lloyd", scale: 2 },
+    { src: "/images/partners/orient_overseas_conatainer_line-removebg-preview.png", alt: "OOCL", scale: 1.2 },
+    { src: "/images/partners/growth-adani-logo.png", alt: "Adani Logistics", scale: 1.0 },
+    { src: "/images/partners/Container_Corporation_of_India_logo.svg.png", alt: "CONCOR", scale: 1.0 },
+    { src: "/images/partners/lg-6732affe950d3-Ocean-Network-Express.webp", alt: "ONE", scale: 1.5 },
+    { src: "/images/partners/COSCOCS-ver1.svg.png", alt: "COSCO", scale: 1.2 },
+    { src: "/images/partners/CMA_CGM_Company_Logo_July_2017.png", alt: "CMA CGM", scale: 1.0 },
+    { src: "/images/partners/bulktainer-group-logo.png", alt: "Bulktainer", scale: 1.2 },
 ];

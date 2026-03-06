@@ -26,8 +26,12 @@ export default function CompanyLogos() {
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  style={{ height: "40px", width: "100px" }}
-                  className="logo_item--img object-contain grayscale opacity-100 hover:grayscale-0 hover:opacity-100 transition-all duration-300 pointer-events-none select-none "
+                  style={{
+                    height: "48px",
+                    width: "120px",
+                    transform: logo.scale ? `scale(${logo.scale})` : 'scale(1)'
+                  }}
+                  className="logo_item--img object-contain opacity-90 hover:opacity-100 transition-all duration-300 pointer-events-none select-none"
                   loading="eager"
                 />
               </div>
