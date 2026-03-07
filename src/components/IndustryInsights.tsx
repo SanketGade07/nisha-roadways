@@ -38,9 +38,10 @@ export default function IndustryInsights() {
         <section className="relative pt-12 pb-16 bg-white overflow-hidden font-branding">
             <div className="max-w-[1440px] mx-auto px-6">
                 <div className="max-w-[1232px] mx-auto">
-                    <div className="flex flex-col mb-12">
-                        <div className="flex justify-between items-start mb-4">
-                            <h2 className="text-[34px] !font-semibold text-black leading-[40px] max-w-[800px] tracking-normal">
+                    <div className="flex flex-col mb-8 sm:mb-12">
+                        {/* Header: Stack on mobile, side-by-side on desktop */}
+                        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4 gap-4">
+                            <h2 className="text-[28px] sm:text-[34px] !font-semibold text-black leading-[34px] sm:leading-[40px] max-w-[800px] tracking-normal">
                                 Industry Insights & Logistics Trends
                             </h2>
                             <Link
@@ -61,7 +62,52 @@ export default function IndustryInsights() {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[24px] w-full">
+                    {/* --- MOBILE CARDS CAROUSEL (Base < md) --- */}
+                    <div className="md:hidden">
+                        <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 -mx-6 px-6 py-4 scrollbar-hide">
+                            {INSIGHTS.map((item, index) => (
+                                <div
+                                    key={index}
+                                    className="bg-white flex flex-col flex-shrink-0 w-[75%] xxs:w-[72%] xs:w-[68%] snap-center transition-all duration-300"
+                                    style={{
+                                        borderRadius: "8.84px",
+                                        filter: "drop-shadow(0 0 3.4px rgba(0, 0, 0, 0.25))",
+                                        padding: "8px 9px"
+                                    }}
+                                >
+                                    <div
+                                        className="relative w-full overflow-hidden"
+                                        style={{ height: "200px", borderRadius: "8.84px" }}
+                                    >
+                                        <Image
+                                            src={item.image}
+                                            alt={item.title}
+                                            fill
+                                            className="object-cover"
+                                        />
+                                    </div>
+
+                                    <div className="flex flex-col flex-1 pt-4 pb-2 px-1">
+                                        <h3 className="!font-semibold text-[16px] leading-[20px] text-[#000000] mb-2 line-clamp-2">
+                                            {item.title}
+                                        </h3>
+                                        <p className="!font-normal text-[12px] leading-[16px] text-[#707070] mb-auto">
+                                            {item.date} <span className="mx-1">-</span> {item.comments}
+                                        </p>
+                                        <Link
+                                            href="#"
+                                            className="!font-medium text-[12px] leading-[16px] text-[#1556F1] hover:text-[#1040D0] transition-colors mt-3 block"
+                                        >
+                                            Read more →
+                                        </Link>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* --- TABLET/DESKTOP GRID (md+) --- */}
+                    <div className="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-[24px] w-full">
                         {INSIGHTS.map((item, index) => (
                             <div
                                 key={index}
@@ -71,7 +117,7 @@ export default function IndustryInsights() {
                                     filter: "drop-shadow(0 0 3.4px rgba(0, 0, 0, 0.25))",
                                     width: "267.7px",
                                     height: "345.94px",
-                                    padding: "8px 9px" // Tight padding to match 8.84 radius aesthetics
+                                    padding: "8px 9px"
                                 }}
                             >
                                 <div

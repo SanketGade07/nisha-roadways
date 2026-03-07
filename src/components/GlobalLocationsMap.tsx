@@ -133,10 +133,10 @@ const MapInternal = ({ geoData, L }: { geoData: any; L: any }) => {
     };
 
     return (
-        <div className="w-full relative overflow-hidden bg-white border border-gray-100 rounded-[20px] z-10" style={{ maxWidth: '1232px', height: '585.62px' }}>
+        <div className="w-full relative overflow-hidden bg-white border border-gray-100 rounded-[20px] z-10 h-[400px] md:h-[585.62px]" style={{ maxWidth: '1232px' }}>
             <MapContainer
-                center={[20, 78]}
-                zoom={3.9}
+                center={typeof window !== 'undefined' && window.innerWidth < 768 ? [22, 78] : [20, 78]}
+                zoom={typeof window !== 'undefined' && window.innerWidth < 768 ? 3.2 : 3.9}
                 maxZoom={10}
                 minZoom={2.5}
                 style={{ width: '100%', height: '100%', background: '#ffffff' }}
@@ -181,11 +181,11 @@ export default function GlobalLocationsMap() {
 
     return (
         <section className="pt-20 pb-12 md:pb-16 relative z-0">
-            <div className="max-w-[1440px] mx-auto px-4 md:px-6 flex flex-col items-center">
-                <h2 className="text-center text-[#000000] font-semibold mb-3 text-[34px] leading-[40px] tracking-tight">
+            <div className="max-w-[1440px] mx-auto px-6 flex flex-col items-center">
+                <h2 className="text-center text-[#000000] font-semibold mb-3 text-[28px] md:text-[34px] leading-[34px] md:leading-[40px] tracking-tight max-w-[320px] md:max-w-none">
                     Ship from 60+ global locations
                 </h2>
-                <p className="text-center text-[#9B9B9B] font-medium max-w-[738px] mb-8 text-[18px] leading-[27px]">
+                <p className="text-center text-[#9B9B9B] font-medium max-w-[738px] mb-8 text-[16px] md:text-[18px] leading-[24px] md:leading-[27px]">
                     We use our network of fulfillment centers to help you strategically
                     split and manage your inventory to reduce shipping costs and transit
                     times.
