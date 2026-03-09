@@ -129,19 +129,23 @@ const MapInternal = ({ geoData, L }: { geoData: any; L: any }) => {
     };
 
     return (
-        <div className="w-full relative overflow-hidden bg-white border border-gray-100 rounded-[20px] z-10 h-[400px] md:h-[585.62px]" style={{ maxWidth: '1232px' }}>
+        <div className="w-full relative bg-white border border-gray-100 rounded-[20px] z-10 h-[400px] md:h-[585.62px]" style={{ maxWidth: '1232px' }}>
             <MapContainer
                 center={typeof window !== 'undefined' && window.innerWidth < 768 ? [22, 78] : [20, 78]}
                 zoom={typeof window !== 'undefined' && window.innerWidth < 768 ? 3.2 : 3.9}
                 maxZoom={10}
                 minZoom={2.5}
-                style={{ width: '100%', height: '100%', background: '#ffffff' }}
+                maxBounds={L.latLngBounds(L.latLng(-75, -180), L.latLng(85, 180))}
+                maxBoundsViscosity={0.0}
+                worldCopyJump={false}
+                inertia={false}
+                style={{ width: '100%', height: '100%', background: '#ffffff', borderRadius: '20px' }}
                 zoomControl={false}
                 scrollWheelZoom={false}
                 dragging={true}
                 doubleClickZoom={true}
                 touchZoom={true}
-                tap={true}
+                tap={false}
                 attributionControl={false}
             >
                 <MapLogic />
@@ -186,7 +190,6 @@ export default function GlobalLocationsMap() {
                     split and manage your inventory to reduce shipping costs and transit
                     times.
                 </p>
-
                 <MapInternal geoData={geoData} L={L} />
             </div>
 
