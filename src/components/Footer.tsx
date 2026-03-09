@@ -85,10 +85,10 @@ const Footer: React.FC = () => {
             <div className="mb-6 sm:mb-12">
 
               {/* Main Footer Content - Spread across 5 columns for maximum horizontal space */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.4fr_1.1fr_1.1fr_0.8fr_0.8fr] gap-8 lg:gap-16">
+              <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-[1.4fr_1.1fr_1.1fr_0.8fr_0.8fr] gap-8 lg:gap-16">
 
                 {/* Column 1 - Logo and Certifications */}
-                <div className="space-y-8">
+                <div className="space-y-8 col-span-2 lg:col-span-1">
                   <div className="flex justify-center lg:justify-start -ml-2 sm:-ml-3">
                     <Image
                       src="/images/nav-logo.png"
@@ -101,10 +101,10 @@ const Footer: React.FC = () => {
 
                   {/* Horizontal Certification Logos */}
                   <div className="pt-2">
-                    <h3 className="text-white text-[16px] sm:text-[18px] font-bold uppercase tracking-wider mb-6">
+                    <h3 className="text-white text-[16px] sm:text-[18px] font-bold uppercase tracking-wider mb-6 text-center lg:text-left">
                       Affiliated By
                     </h3>
-                    <div className="flex flex-wrap items-center gap-4 sm:gap-6">
+                    <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6">
                       <Image
                         src="/images/footer/0ac53d892398e072949c7f80ae7efc8a77c580f3.png"
                         alt="Certification 1"

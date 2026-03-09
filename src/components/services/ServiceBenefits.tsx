@@ -56,36 +56,36 @@ export default function ServiceBenefits({ benefits }: ServiceBenefitsProps) {
     const uy = CUT_Y_END / diagLen;
 
     return (
-        <section id="benefits" className="relative py-24 bg-white overflow-hidden font-branding scroll-mt-32">
-            <div className="min-w-[1440px] mx-auto px-6 sm:px-10 lg:px-20 relative z-10">
+        <section id="benefits" className="relative py-16 sm:py-24 bg-white overflow-hidden font-branding scroll-mt-32">
+            <div className="max-w-[1440px] mx-auto px-4 sm:px-10 lg:px-20 relative z-10">
 
                 {/* Section Header */}
-                <div className="mb-14">
+                <div className="mb-10 sm:mb-14 text-center lg:text-left">
                     {/* Badge */}
-                    <div className="inline-flex items-center justify-center w-[141px] h-[33px] rounded-[30px] border border-[#677ED3] bg-[#FAFAFA] mb-7 shadow-sm">
-                        <span className="text-[15px] font-normal text-[#1557F3] leading-none">
+                    <div className="inline-flex items-center justify-center w-[141px] h-[33px] rounded-[30px] border border-[#677ED3] bg-[#FAFAFA] mb-6 sm:mb-7 shadow-sm">
+                        <span className="text-[14px] sm:text-[15px] font-normal text-[#1557F3] leading-none">
                             Key Benefits
                         </span>
                     </div>
 
-                    <h2 className="text-[40px] font-semibold text-[#000000] leading-[40px] mb-2">
+                    <h2 className="text-[30px] sm:text-[40px] font-semibold text-[#000000] leading-[36px] sm:leading-[40px] mb-3 sm:mb-2 uppercase lg:normal-case">
                         Why Choose Our Service
                     </h2>
 
-                    <p className="text-[16px] font-medium text-[#62748E] leading-[40px] max-w-[645px] mb-[-20px]">
+                    <p className="text-[15px] sm:text-[16px] font-medium text-[#62748E] leading-normal sm:leading-[40px] max-w-[645px] mx-auto lg:mx-0">
                         Discover the advantages that set us apart from the competition.
                     </p>
                 </div>
 
-                {/* Benefits Grid */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-6">
+                {/* Benefits: Horizontal Carousel on Mobile, Grid on Desktop */}
+                <div className="flex overflow-x-auto lg:grid lg:grid-cols-2 gap-6 pb-4 lg:pb-0 scrollbar-hide snap-x snap-mandatory -mx-4 px-4 lg:mx-0 lg:px-0">
                     {benefits.slice(0, 4).map((benefit, index) => (
                         <div
                             key={index}
-                            className="relative w-full max-w-[627px] h-[200px]"
+                            className="group relative min-w-[300px] sm:min-w-[340px] lg:min-w-0 w-[300px] sm:w-[340px] lg:w-full h-auto lg:h-[200px] lg:max-w-[627px] snap-center shrink-0 lg:shrink"
                         >
-                            {/* Card Background SVG for Rounded Chamfer and Shadow */}
-                            <div className="absolute inset-0 z-0">
+                            {/* Desktop Only: Card Background SVG */}
+                            <div className="absolute inset-0 z-0 hidden lg:block">
                                 <svg
                                     width="100%"
                                     height="100%"
@@ -117,50 +117,24 @@ export default function ServiceBenefits({ benefits }: ServiceBenefitsProps) {
                                 </svg>
                             </div>
 
-                            {/* Card Content Wrapper - overflow-hidden here to clip image, not on card (which would clip SVG border) */}
-                            <div className="relative z-10 flex h-full w-full overflow-hidden">
-                                {/* Left Side: Content */}
-                                <div className="flex-1 p-[24px] pr-2 flex flex-col justify-between">
-                                    <div className="space-y-[12px]">
-                                        <h3 className="text-[18px] font-bold text-black leading-tight">
-                                            {benefit.title}
-                                        </h3>
-                                        <p className="text-[12px] font-normal text-[#5B5B5B] leading-[19.68px] text-justify pr-6">
-                                            {benefit.description}
-                                        </p>
-                                    </div>
+                            {/* Mobile Only: Simple Card Background */}
+                            <div className="absolute inset-0 bg-white border border-[#E0E0E0] rounded-[16px] shadow-sm lg:hidden"></div>
 
-                                    <div className="flex items-center gap-[6px] text-[10.82px] font-medium text-black">
-                                        <div className="w-[16.72px] h-[16.72px] flex items-center justify-center shrink-0">
-                                            <Image
-                                                src="/images/specialized-solor-transportation/lets-icons_check-ring-round.svg"
-                                                alt="Check icon"
-                                                width={17}
-                                                height={17}
-                                                className="w-full h-full"
-                                            />
-                                        </div>
-                                        <span className="leading-none mb-[5px]">Guaranteed quality</span>
-                                    </div>
-                                </div>
-
-                                {/* Right Side: Image Container */}
-                                <div className="relative w-[247px] h-[182px] mt-[9px] mr-[9px] shrink-0">
+                            {/* Card Content Wrapper */}
+                            <div className="relative z-10 flex flex-col lg:flex-row h-full w-full overflow-hidden rounded-[16px] lg:rounded-none">
+                                {/* Image - Top on mobile, Right on desktop */}
+                                <div className="relative w-full h-[160px] lg:w-[247px] lg:h-[182px] lg:mt-[9px] lg:mr-[9px] shrink-0 order-1 lg:order-2">
                                     <div
                                         className="relative w-full h-full overflow-hidden"
                                         style={{
-                                            // Mathematically precise parallel clip-path
-                                            clipPath: `path('M 4,0 H ${IMG_CUT_X_REL - CUT_RADIUS} Q ${IMG_CUT_X_REL},0 ${IMG_CUT_X_REL + (CUT_RADIUS * ux)},${CUT_RADIUS * uy} L ${IMG_WIDTH - (CUT_RADIUS * ux)},${IMG_CUT_Y_REL - (CUT_RADIUS * uy)} Q ${IMG_WIDTH},${IMG_CUT_Y_REL} ${IMG_WIDTH},${IMG_CUT_Y_REL + CUT_RADIUS} V ${IMG_HEIGHT - 4} Q ${IMG_WIDTH},${IMG_HEIGHT} ${IMG_WIDTH - 4},${IMG_HEIGHT} H 4 Q 0,${IMG_HEIGHT} 0,${IMG_HEIGHT - 4} V 4 Q 0,0 4,0 Z')`
+                                            clipPath: typeof window !== 'undefined' && window.innerWidth >= 1024
+                                                ? `path('M 4,0 H ${IMG_CUT_X_REL - CUT_RADIUS} Q ${IMG_CUT_X_REL},0 ${IMG_CUT_X_REL + (CUT_RADIUS * ux)},${CUT_RADIUS * uy} L ${IMG_WIDTH - (CUT_RADIUS * ux)},${IMG_CUT_Y_REL - (CUT_RADIUS * uy)} Q ${IMG_WIDTH},${IMG_CUT_Y_REL} ${IMG_WIDTH},${IMG_CUT_Y_REL + CUT_RADIUS} V ${IMG_HEIGHT - 4} Q ${IMG_WIDTH},${IMG_HEIGHT} ${IMG_WIDTH - 4},${IMG_HEIGHT} H 4 Q 0,${IMG_HEIGHT} 0,${IMG_HEIGHT - 4} V 4 Q 0,0 4,0 Z')`
+                                                : undefined
                                         }}
                                     >
-                                        {/* Image wrapper handles zoom + mirror */}
                                         <div
-                                            className="absolute"
+                                            className="absolute inset-0"
                                             style={{
-                                                // Zoom out: negative inset makes area bigger, showing more image
-                                                // Zoom in: positive scale shows less image (more detail)
-                                                // Normal: just fill the container
-                                                inset: index === 0 ? '-1%' : '0',
                                                 transform: [
                                                     index < 3 ? 'scaleX(-1)' : '',
                                                     index === 1 ? 'scale(1.25)' : '',
@@ -177,7 +151,7 @@ export default function ServiceBenefits({ benefits }: ServiceBenefitsProps) {
                                             />
                                         </div>
 
-                                        {/* Icon Badge Overlay - Dimensions from Figma */}
+                                        {/* Icon Badge Overlay */}
                                         <div className="absolute bottom-[10px] left-[10px] z-30 w-[44.27px] h-[44.27px] bg-white rounded-[9.84px] shadow-md flex items-center justify-center">
                                             <div className="w-[21.64px] h-[21.64px] flex items-center justify-center">
                                                 <Image
@@ -189,6 +163,31 @@ export default function ServiceBenefits({ benefits }: ServiceBenefitsProps) {
                                                 />
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+
+                                {/* Content - Below image on mobile, Left on desktop */}
+                                <div className="flex-1 p-5 lg:p-[24px] lg:pr-2 flex flex-col justify-between order-2 lg:order-1">
+                                    <div className="space-y-2 lg:space-y-[12px]">
+                                        <h3 className="text-[16px] lg:text-[18px] font-bold text-black leading-snug">
+                                            {benefit.title}
+                                        </h3>
+                                        <p className="text-[12px] lg:text-[12px] font-normal text-[#5B5B5B] leading-[18px] lg:leading-[19.68px] text-left lg:text-justify pr-0 lg:pr-6 line-clamp-4 lg:line-clamp-none">
+                                            {benefit.description}
+                                        </p>
+                                    </div>
+
+                                    <div className="flex items-center gap-[6px] text-[11px] lg:text-[10.82px] font-medium text-black mt-4 lg:mt-0">
+                                        <div className="w-[16px] h-[16px] lg:w-[16.72px] lg:h-[16.72px] flex items-center justify-center shrink-0">
+                                            <Image
+                                                src="/images/specialized-solor-transportation/lets-icons_check-ring-round.svg"
+                                                alt="Check icon"
+                                                width={17}
+                                                height={17}
+                                                className="w-full h-full"
+                                            />
+                                        </div>
+                                        <span className="leading-none mb-[2px] lg:mb-[5px]">Guaranteed quality</span>
                                     </div>
                                 </div>
                             </div>

@@ -63,13 +63,9 @@ const MapInternal = ({ geoData, L }: { geoData: any; L: any }) => {
 
         if (!ready) return null;
 
-        /**
-         * Logic: 
-         * Initial view (Zoom 4 or 5) -> Hide background labels.
-         * Zoom In (> 5) -> Show city labels.
-         * Zoom Out (< 4) -> Show country names.
-         */
-        const labelOpacity = (zoom > 5 || zoom < 4) ? 0.9 : 0;
+        // Logic: Keep initial starting views (3.9 / 3.2) clean and labels-free.
+        // Show labels when zooming out further (< 3.0) or zooming in deeply (> 5.5).
+        const labelOpacity = (zoom > 5.5 || zoom < 3.0) ? 0.9 : 0;
 
         return (
             <>
